@@ -8,6 +8,9 @@
 *.lib
 *.a
 
+# Generated Assembly
+*.s
+
 # Shared objects (inc. Windows DLLs)
 *.dll
 *.so
@@ -21,3 +24,6 @@
 *.i*86
 *.x86_64
 *.hex
+
+# GEdit save files
+*~
