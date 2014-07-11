@@ -5,4 +5,4 @@ cordic:
 	gcc -Wall -O3 -std=c99 -fverbose-asm -S cordic.c
 
 clean:
-	rm -f cordic.o cordic.s cordic
+	rm -f cordic.o cordic.s cordic cordic.out
