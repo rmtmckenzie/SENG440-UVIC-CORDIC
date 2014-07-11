@@ -10,15 +10,7 @@
 void iterationComputation(float *X, float *Y, float *Z, float theta, float shift)
 {
     // Based on operation, determine whether additions or subtractions will occur.
-    int mew = 0;
-    if ( *Z >= 0.0 )
-    {
-        mew = 1.0;
-    }
-    else if ( *Z < 0.0 )
-    {
-        mew = -1.0;
-    }
+    int mew = *Z >= 0.0 ? 1.0 : -1.0;
 
     // Compute new values.
 	float temp = *X;
