@@ -13,23 +13,34 @@ def do(filename):
     x = random.randint(1,89)
     y = random.randint(1,89)
     angle = random.randint(1,89)
-    anglerad = radians(angle)
+
+    #note: rotates CCW so negative
+    #  should it????
+    anglerad = -radians(angle)
 
     inangle = degrees(atan(float(y)/x))
     outangle = inangle + angle
 
-    xout = x * cos(anglerad) + y * sin(anglerad)
-    yout = y * cos(anglerad) - x * sin(anglerad)
+    xexp = x * cos(anglerad) + y * sin(anglerad)
+    yexp = y * cos(anglerad) - x * sin(anglerad)
 
     print "Input:    x = {:6.2f}, y = {:6.2f}, angle = {:6.2f}, rot_angle = {:.2f}".format(x,y,inangle,angle)
         
-    print "Expected: x = {:6.2f}, y = {:6.2f}, angle = {:6.2f}".format(xout,yout,outangle)
-
-    
+    print "Expected: x = {:6.2f}, y = {:6.2f}, angle = {:6.2f}".format(xexp,yexp,outangle)
 
     out = subprocess.check_output([filename,str(x),str(y),str(angle)])
 
+    xout=None
+    yout=None
+
+    for line in out.split("\n"):
+        if "Final X-value: " in line:
+            xout = line.split(" ")[-1]
+        if "Final Y-value: " in line:
+            yout = line.split(" ")[-1]
     
+    print "Received: x = {:6.2f}, y = {:6.2f}".format(float(xout),float(yout))
+
     print ""
 
 def main():
