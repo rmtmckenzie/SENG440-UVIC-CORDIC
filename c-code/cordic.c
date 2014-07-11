@@ -76,6 +76,10 @@ int main(int argc, char *argv[])
     // Lookup tables.
     float circularLookup[16] = {45, 27, 14, 7.1, 3.6, 1.8, 0.9, 0.45, 0.22, 0.11, 0.056, 0.028, 0.014, 0.007, 0.0035, 0.0017};
     float hyperbolicLookup[15] = {0.55, 0.26, 0.13, 0.063, 0.031, 0.016, 0.0078, 0.0039, 0.002, 0.00098, 0.00049, 0.00024, 0.00012, 0.000061, 0.000031};
+    float powLookup[16] =  {1, 0.5, 0.25, 0.125, 0.0625, 0.03125, 0.015625, 0.0078125, 0.003090625, 0.001953125, 0.0009765625, 0.00048828125, 0.00024414062, 0.00012207031, 0.00006103515, 0.00003051757}
+        
+    }    
+
     // tanh^1(2^-1) is infinity. so iteration 0 is skipped in hyperbolic. Better accuracy required.
 
     // Perform iterations based on mode.
@@ -85,16 +89,14 @@ int main(int argc, char *argv[])
         case 1: // Circular
             for ( int i=0; i < N_ELEMENTS(circularLookup); i++)
             {
-                shift = pow(2, -i);
-                iterationComputation(&x, &y, &z, circularLookup[i], mode, operation, shift);
+                iterationComputation(&x, &y, &z, circularLookup[i], mode, operation, powLookup[i]);
             }
             break;
             
         case -1: // Hyperbolic
             for ( int i=0; i < N_ELEMENTS(hyperbolicLookup); i++)
             {
-                shift = pow(2, -(i+1));
-                iterationComputation(&x, &y, &z, hyperbolicLookup[i], mode, operation, shift);
+                iterationComputation(&x, &y, &z, hyperbolicLookup[i], mode, operation, powLookup[i+1]);
             }
             break;
     }
