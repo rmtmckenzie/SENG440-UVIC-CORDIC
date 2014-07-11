@@ -1,0 +1,61 @@
+#!/usr/bin/env python
+# encoding: utf-8
+"""
+test.py
+"""
+import os
+import sys
+import random
+from math import radians, degrees, sin, cos, atan
+import subprocess
+
+def do(filename):
+    x = random.randint(1,89)
+    y = random.randint(1,89)
+    angle = random.randint(1,89)
+    anglerad = radians(angle)
+
+    inangle = degrees(atan(float(y)/x))
+    outangle = inangle + angle
+
+    xout = x * cos(anglerad) + y * sin(anglerad)
+    yout = y * cos(anglerad) - x * sin(anglerad)
+
+    print "Input:    x = {:6.2f}, y = {:6.2f}, angle = {:6.2f}, rot_angle = {:.2f}".format(x,y,inangle,angle)
+        
+    print "Expected: x = {:6.2f}, y = {:6.2f}, angle = {:6.2f}".format(xout,yout,outangle)
+
+    
+
+    out = subprocess.check_output([filename,str(x),str(y),str(angle)])
+
+    
+    print ""
+
+def main():
+    numrand = 100
+    argv = sys.argv
+    if len(argv) < 2:
+        print ("Invalid arguments. Syntax:\n "+argv[0]+" executable [num iterations=100]")
+
+    if len(argv) >=3:
+        numrand = int(argv[2])
+
+    exe = argv[1]
+
+    if not os.path.isfile(exe):
+        print "File",exe,"doesn't exist."
+        return 1
+    
+    if not os.access(exe, os.X_OK):
+        print "File",exe,"is not executable."
+    
+    for i in xrange(numrand):
+        do(exe)
+
+
+    return 0        # success
+  
+if __name__ == '__main__':
+    status = main()
+    sys.exit(status)
