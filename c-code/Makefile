@@ -8,7 +8,7 @@ profiler_arm:
 	arm-linux-gcc -Wall --static -std=c99 -o build_arm/profiler profile.c
 
 profiler_arm_opt:
-	arm-linux-gcc -O2 -Wall  --static -std=c99 -o build_arm/profiler_opt profile.c
+	arm-linux-gcc -O3 -Wall  --static -std=c99 -o build_arm/profiler_opt profile.c
 
 profiler:
 	gcc -Wall -pg -std=c99 -o build/profile profile.c
