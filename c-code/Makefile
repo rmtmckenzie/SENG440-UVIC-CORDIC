@@ -1,11 +1,16 @@
-all: cordic cordic_int
+all: profiler profiler_opt
 
-cordic_int:
-	gcc -Wall -O3 -std=c99 -g -o cordicint.out cordic_int.c
+valuetester:
+	gcc -Wall -pg -std=c99 -o build/valuetester valuetester.c
 
-cordic:
-	gcc -Wall -O3 -std=c99 -g -o cordic.out cordic.c
-	gcc -Wall -O3 -std=c99 -fverbose-asm -S cordic.c
+profiler:
+	gcc -Wall -pg -std=c99 -o build/profile profile.c
+
+profiler_opt:
+	gcc -Wall -O2 -pg -std=c99 -o build/profile_opt profile.c
+
+cordic_float:
+	gcc -Wall -O3 -std=c99 -g -o build/cordicfloat cordic_float.c
 
 clean:
-	rm -f cordic.o cordic.s cordic *.out
+	rm -f cordic.o cordic.s build/profile* build/value* build/gmon.out build/*.stats temp*
