@@ -12,6 +12,7 @@
 //#define RUNROLL4
 #define RPIPE
 #define RPIPE2
+#define RHARDCODE
 
 #include "impl/int_basic.c"
 #include "impl/int_opt.c"
@@ -20,6 +21,7 @@
 #include "impl/int_unroll4.c"
 #include "impl/int_pipe.c"
 #include "impl/int_pipe2.c"
+#include "impl/int_hardcode.c"
 
 /* 
 Optimizations:
@@ -87,9 +89,9 @@ int main(int argc, char *argv[])
 
 #ifdef ROPT2
     before = clock();
-    for(int i = 0; i < num; i++, 
-            x = rand() % 10000 + 1000, 
-            y = rand() % 10000 + 1000, 
+    for(int i = 0; i < num; i++,
+            x = rand() % 10000 + 1000,
+            y = rand() % 10000 + 1000,
             z = rand() % HALFPI2)
         int_opt2    (&x, &y, &z, LOOKUP2);
     printf("Opt2: %f\n",(double) (clock() - before) / CLOCKS_PER_SEC);
@@ -97,9 +99,9 @@ int main(int argc, char *argv[])
 
 #ifdef RUNROLL2
     before = clock();
-    for(int i = 0; i < num; i++, 
-            x = rand() % 10000 + 1000, 
-            y = rand() % 10000 + 1000, 
+    for(int i = 0; i < num; i++,
+            x = rand() % 10000 + 1000,
+            y = rand() % 10000 + 1000,
             z = rand() % HALFPI2)
         int_unroll2 (&x, &y, &z, LOOKUP2);
     printf("Unroll2: %f\n",(double) (clock() - before) / CLOCKS_PER_SEC);
@@ -134,5 +136,16 @@ int main(int argc, char *argv[])
         int_pipe2   (&x, &y, &z, LOOKUP2);
     printf("Pipe2: %f\n",(double) (clock() - before) / CLOCKS_PER_SEC);
 #endif
+
+#ifdef RHARDCODE
+    before=clock();
+    for(int i = 0; i < num; i++,
+            x = rand() % 10000 + 1000,
+            y = rand() % 10000 + 1000,
+            z = rand() % HALFPI2)
+        int_pipe2(&x, &y, &z, LOOKUP2);
+    printf("Hardcode: %f\n",(double) (clock() - before) / CLOCKS_PER_SEC);
+#endif
+
     return 0;
 }
