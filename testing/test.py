@@ -10,8 +10,8 @@ from math import radians, degrees, sin, cos, atan
 import subprocess
 
 def do(filename):
-    x = random.randint(1,2000)
-    y = random.randint(1,2000)
+    x = random.randint(1,640000)
+    y = random.randint(1,640000)
     angle = random.randint(1,89)
 
     #note: rotates CCW so negative
@@ -76,15 +76,16 @@ def main():
         print "File",exe,"is not executable."
     
     f = open(os.devnull, 'w')
+
     sys.stdout = f
 
     tx1 = 0; ty1 = 0; tx2 = 0; ty2 = 0;
     for i in xrange(numrand):
         (x1,y1,x2,y2) = do(exe)
-        tx1 += x1;
-        ty1 += y1;
-        tx2 += x2;
-        ty2 += y2;
+        tx1 += abs(x1);
+        ty1 += abs(y1);
+        tx2 += abs(x2);
+        ty2 += abs(y2);
 
     sys.stdout = sys.__stdout__    
 
@@ -92,8 +93,9 @@ def main():
     ty1 /= numrand;
     tx2 /= numrand;
     ty2 /= numrand;
-    print "Averages: x1 = {:5.2f}, y1 = {:5.2f} x1 = {:5.2f}, y1 = {:5.2f}".format(tx1,ty1,tx2,ty2)
-        
+    print "Averages: x1 = {:5.2f}, y1 = {:5.2f}; x2 = {:5.2f}, y2 = {:5.2f}".format(tx1,ty1,tx2,ty2)
+    
+    f.close()
 
     return 0        # success
   

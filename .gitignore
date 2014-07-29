@@ -27,3 +27,6 @@
 
 # GEdit save files
 *~
+
+c-code/build/profile*
+c-code/build/temp*

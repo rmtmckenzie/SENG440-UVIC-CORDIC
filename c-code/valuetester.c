@@ -2,48 +2,9 @@
 #include <string.h>
 #include <math.h>
 
-#define NUM_ELEMENTS 16
+#include "defines.h"
 
-const int INANGLE = 90;
-
-const int HALFPI1 = 0x6487;
-const int LOOKUP1[NUM_ELEMENTS] = {0x3243, 0x1DAB, 0xFAD, 0x7F4, 0x3FE, 0x1FF, 0xFF, 0x7F, 0x3F, 0x1F, 0xF, 0x7, 0x3, 0x1, 0x0, 0x0};
-
-const int HALFPI2 = 0xC90F;
-const int LOOKUP2[NUM_ELEMENTS] = {0x6487, 0x3B58, 0x1F5A, 0xFEA, 0x7FC, 0x3FF, 0x1FF, 0xFF, 0x7F, 0x3F, 0x1F, 0xF, 0x7, 0x3, 0x1, 0x0};
-
-const float SCALEFACTOR = 0.607252;
-
-void cordic(int *theta, int *x, int *y, const int *lookup)
-{
-    int sign;
-    int lx, ly, lz;
-    int nx, ny, nz;
-    
-    lx = *x;
-    ly = *y;
-    lz = *theta;
-    
-
-    for(int i = 0; i < NUM_ELEMENTS; i++) {
-        sign = lz >= 0 ? 1 : 0;
-        if(sign){
-            nx = lx - (ly >> i);
-            ny = ly + (lx >> i);
-            nz = lz - lookup[i];
-        } else {
-            nx = lx + (ly >> i);
-            ny = ly - (lx >> i);
-            nz = lz + lookup[i];
-        }
-        lx = nx; ly = ny; lz = nz;
-    }
-
-    *x = lx;
-    *y = ly;
-    *theta = lz;
-}
-
+#include "impl/int_basic.c"
 
 int main(int argc, char *argv[])
 {
@@ -76,7 +37,7 @@ int main(int argc, char *argv[])
     printf("Method 1:\n");
     printf("Starting Angle: %i\n\n", z);
 
-    cordic(&z, &x, &y, LOOKUP1);
+    int_basic(&z, &x, &y, LOOKUP1);
     // Print final values.
 
     printf("Xout: %i\n",x);
@@ -91,7 +52,7 @@ int main(int argc, char *argv[])
 
     printf("Method 2:\n");
     printf("Starting Angle: %i\n\n", z);
-    cordic(&z, &x, &y, LOOKUP2);
+    int_basic(&z, &x, &y, LOOKUP2);
 
     printf("Xout: %i\n",x);
     printf("Yout: %i\n",y);
