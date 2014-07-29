@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <string.h>
 #include <math.h>
+#include <time.h>
 
 #include <stdlib.h>
 
@@ -38,15 +39,17 @@ Implementations:
 int main(int argc, char *argv[])
 {
     int num = 9999999;
+    clock_t before;
 
     if(argc >= 2){
         sscanf(argv[1],"%i",&num);
-    } 
+    }
 
     printf("Running %d times.\n",num);
 
 
-    int xrand, x = 1000, yrand, y = 1000, zrand, z = 1000;
+    int x = 1000, y = 1000, z = 1000;
+//    int xrand, yrand, zrand;
 
     if( ! (!(0 & 0x80000000)
             && !(1 & 0x80000000)
@@ -57,49 +60,61 @@ int main(int argc, char *argv[])
         return(1);
     }
 
-    for(int i = 0; i < num; i++, 
-            x = rand() % 10000 + 1000, 
-            y = rand() % 10000 + 1000, 
+    before = clock();
+    for(int i = 0; i < num; i++,
+            x = rand() % 10000 + 1000,
+            y = rand() % 10000 + 1000,
             z = rand() % HALFPI2)
         int_basic   (&x, &y, &z, LOOKUP2);
-    
-    for(int i = 0; i < num; i++, 
-            x = rand() % 10000 + 1000, 
-            y = rand() % 10000 + 1000, 
+    printf("Basic: %f\n",(float) (clock() - before) / CLOCKS_PER_SEC);
+
+    before = clock();
+    for(int i = 0; i < num; i++,
+            x = rand() % 10000 + 1000,
+            y = rand() % 10000 + 1000,
             z = rand() % HALFPI2)
         int_opt     (&x, &y, &z, LOOKUP2);
+    printf("Opt: %f\n",(float) (clock() - before) / CLOCKS_PER_SEC);
 
+    before = clock();
     for(int i = 0; i < num; i++, 
             x = rand() % 10000 + 1000, 
             y = rand() % 10000 + 1000, 
             z = rand() % HALFPI2)
         int_opt2    (&x, &y, &z, LOOKUP2);
+    printf("Opt2: %f\n",(float) (clock() - before) / CLOCKS_PER_SEC);
 
+    before = clock();
     for(int i = 0; i < num; i++, 
             x = rand() % 10000 + 1000, 
             y = rand() % 10000 + 1000, 
             z = rand() % HALFPI2)
         int_unroll2 (&x, &y, &z, LOOKUP2);
+    printf("Unroll2: %f\n",(float) (clock() - before) / CLOCKS_PER_SEC);
 
+    before = clock();
     for(int i = 0; i < num; i++, 
             x = rand() % 10000 + 1000, 
             y = rand() % 10000 + 1000, 
             z = rand() % HALFPI2)
         int_unroll4 (&x, &y, &z, LOOKUP2);
+    printf("Unroll4: %f\n",(float) (clock() - before) / CLOCKS_PER_SEC);
 
-    for(int i = 0; i < num; i++, 
-            x = rand() % 10000 + 1000, 
-            y = rand() % 10000 + 1000, 
+    before = clock();
+    for(int i = 0; i < num; i++,
+            x = rand() % 10000 + 1000,
+            y = rand() % 10000 + 1000,
             z = rand() % HALFPI2)
         int_pipe    (&x, &y, &z, LOOKUP2);
-            
+    printf("Pipe: %f\n",(float) (clock() - before) / CLOCKS_PER_SEC);
+
 /*
     for(int i = 0; i < num; i++) {
         xrand = rand() % 10000 + 1000;
         yrand = rand() % 10000 + 1000;
-        
 
-        x = xrand; y = yrand; z = zrand;        
+
+        x = xrand; y = yrand; z = zrand;
         int_basic   (&x, &y, &z, LOOKUP2);
 
         x = xrand; y = yrand; z = zrand;
@@ -118,6 +133,6 @@ int main(int argc, char *argv[])
         int_pipe    (&x, &y, &z, LOOKUP2);
     }
 */
-    
+
     return 0;
 }
