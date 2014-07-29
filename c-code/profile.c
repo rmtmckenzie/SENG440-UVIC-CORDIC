@@ -1,11 +1,16 @@
 #include <stdio.h>
-#include <string.h>
 #include <math.h>
 #include <time.h>
-
 #include <stdlib.h>
 
 #include "defines.h"
+
+//#define RBASIC
+//#define ROPT
+#define ROPT2
+//#define RUNROLL2
+//#define RUNROLL4
+#define RPIPE
 
 #include "impl/int_basic.c"
 #include "impl/int_opt.c"
@@ -48,8 +53,7 @@ int main(int argc, char *argv[])
     printf("Running %d times.\n",num);
 
 
-    int x = 1000, y = 1000, z = 1000;
-//    int xrand, yrand, zrand;
+    int x, y, z;
 
     if( ! (!(0 & 0x80000000)
             && !(1 & 0x80000000)
@@ -60,6 +64,7 @@ int main(int argc, char *argv[])
         return(1);
     }
 
+#ifdef RBASIC
     before = clock();
     for(int i = 0; i < num; i++,
             x = rand() % 10000 + 1000,
@@ -67,7 +72,9 @@ int main(int argc, char *argv[])
             z = rand() % HALFPI2)
         int_basic   (&x, &y, &z, LOOKUP2);
     printf("Basic: %f\n",(double) (clock() - before) / CLOCKS_PER_SEC);
+#endif
 
+#ifdef ROPT
     before = clock();
     for(int i = 0; i < num; i++,
             x = rand() % 10000 + 1000,
@@ -75,7 +82,9 @@ int main(int argc, char *argv[])
             z = rand() % HALFPI2)
         int_opt     (&x, &y, &z, LOOKUP2);
     printf("Opt: %f\n",(double) (clock() - before) / CLOCKS_PER_SEC);
+#endif
 
+#ifdef ROPT2
     before = clock();
     for(int i = 0; i < num; i++, 
             x = rand() % 10000 + 1000, 
@@ -83,7 +92,9 @@ int main(int argc, char *argv[])
             z = rand() % HALFPI2)
         int_opt2    (&x, &y, &z, LOOKUP2);
     printf("Opt2: %f\n",(double) (clock() - before) / CLOCKS_PER_SEC);
+#endif
 
+#ifdef RUNROLL2
     before = clock();
     for(int i = 0; i < num; i++, 
             x = rand() % 10000 + 1000, 
@@ -91,7 +102,9 @@ int main(int argc, char *argv[])
             z = rand() % HALFPI2)
         int_unroll2 (&x, &y, &z, LOOKUP2);
     printf("Unroll2: %f\n",(double) (clock() - before) / CLOCKS_PER_SEC);
+#endif
 
+#ifdef RUNROLL4
     before = clock();
     for(int i = 0; i < num; i++, 
             x = rand() % 10000 + 1000, 
@@ -99,7 +112,9 @@ int main(int argc, char *argv[])
             z = rand() % HALFPI2)
         int_unroll4 (&x, &y, &z, LOOKUP2);
     printf("Unroll4: %f\n",(double) (clock() - before) / CLOCKS_PER_SEC);
+#endif
 
+#ifdef RPIPE
     before = clock();
     for(int i = 0; i < num; i++,
             x = rand() % 10000 + 1000,
@@ -107,32 +122,7 @@ int main(int argc, char *argv[])
             z = rand() % HALFPI2)
         int_pipe    (&x, &y, &z, LOOKUP2);
     printf("Pipe: %f\n",(double) (clock() - before) / CLOCKS_PER_SEC);
-
-/*
-    for(int i = 0; i < num; i++) {
-        xrand = rand() % 10000 + 1000;
-        yrand = rand() % 10000 + 1000;
-
-
-        x = xrand; y = yrand; z = zrand;
-        int_basic   (&x, &y, &z, LOOKUP2);
-
-        x = xrand; y = yrand; z = zrand;
-        int_opt     (&x, &y, &z, LOOKUP2);
-
-        x = xrand; y = yrand; z = zrand;
-        int_opt2    (&x, &y, &z, LOOKUP2);
-
-        x = xrand; y = yrand; z = zrand;
-        int_unroll2 (&x, &y, &z, LOOKUP2);
-
-        x = xrand; y = yrand; z = zrand;
-        int_unroll4 (&x, &y, &z, LOOKUP2);
-
-        x = xrand; y = yrand; z = zrand;
-        int_pipe    (&x, &y, &z, LOOKUP2);
-    }
-*/
+#endif
 
     return 0;
 }
