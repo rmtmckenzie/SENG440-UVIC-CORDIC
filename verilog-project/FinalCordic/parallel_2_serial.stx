@@ -1,0 +1,46 @@
+Release 13.4 - xst O.87xd (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+--> Parameter TMPDIR set to C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/xst/projnav.tmp
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> Parameter xsthdpdir set to C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/xst
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.13 secs
+ 
+--> WARNING:Xst:3164 - Option "-debug" found multiple times in the command line. Only the first occurence is considered.
+
+=========================================================================
+*                          HDL Compilation                              *
+=========================================================================
+Compiling vhdl file "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/cordic_package.vhd" in Library work.
+Compiling vhdl file "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/SerialTx.vhd" in Library work.
+Architecture behavioral of Entity serialtx is up to date.
+Compiling vhdl file "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/slow_clk.vhd" in Library work.
+Architecture slow_clk of Entity slow_clk is up to date.
+Compiling vhdl file "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/send_data.vhd" in Library work.
+Architecture behavioral of Entity send_data is up to date.
+Compiling vhdl file "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/ascii.vhd" in Library work.
+Architecture behavioral of Entity ascii is up to date.
+Compiling vhdl file "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/uart.vhd" in Library work.
+Architecture uart of Entity uart is up to date.
+Compiling vhdl file "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/parallel_2_serial.vhd" in Library work.
+Entity <parallel_2_serial> compiled.
+Entity <parallel_2_serial> (Architecture <behavioral>) compiled.
+
+
+Total REAL time to Xst completion: 0.00 secs
+Total CPU time to Xst completion: 0.27 secs
+ 
+--> 
+
+Total memory usage is 167060 kilobytes
+
+Number of errors   :    0 (   0 filtered)
+Number of warnings :    1 (   0 filtered)
+Number of infos    :    0 (   0 filtered)
+

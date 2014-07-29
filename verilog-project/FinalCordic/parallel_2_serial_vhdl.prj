@@ -1,0 +1,7 @@
+vhdl work "C:\Users\jdparry\Downloads\FinalCordicFinal\FinalCordic\cordic_package.vhd"
+vhdl work "C:\Users\jdparry\Downloads\FinalCordicFinal\FinalCordic\slow_clk.vhd"
+vhdl work "C:\Users\jdparry\Downloads\FinalCordicFinal\FinalCordic\SerialTx.vhd"
+vhdl work "C:\Users\jdparry\Downloads\FinalCordicFinal\FinalCordic\uart.vhd"
+vhdl work "C:\Users\jdparry\Downloads\FinalCordicFinal\FinalCordic\send_data.vhd"
+vhdl work "C:\Users\jdparry\Downloads\FinalCordicFinal\FinalCordic\ascii.vhd"
+vhdl work "C:\Users\jdparry\Downloads\FinalCordicFinal\FinalCordic\parallel_2_serial.vhd"

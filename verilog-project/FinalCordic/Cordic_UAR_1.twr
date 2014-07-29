@@ -1,0 +1,136 @@
+--------------------------------------------------------------------------------
+Release 13.4 Trace  (nt)
+Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.
+
+C:\Xilinx\13.4\ISE_DS\ISE\bin\nt\unwrapped\trce.exe -intstyle ise -v 3 -s 5 -n
+3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr
+Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf
+
+Design file:              Cordic_UAR_1.ncd
+Physical constraint file: Cordic_UAR_1.pcf
+Device,package,speed:     xc3s1200e,fg320,-5 (PRODUCTION 1.27 2012-01-07)
+Report level:             verbose report
+
+Environment Variable      Effect 
+--------------------      ------ 
+NONE                      No environment variables were set
+--------------------------------------------------------------------------------
+
+INFO:Timing:2698 - No timing constraints found, doing default enumeration.
+INFO:Timing:3412 - To improve timing, see the Timing Closure User Guide (UG612).
+INFO:Timing:2752 - To get complete path coverage, use the unconstrained paths 
+   option. All paths that are not constrained will be reported in the 
+   unconstrained paths section(s) of the report.
+INFO:Timing:3339 - The clock-to-out numbers in this timing report are based on 
+   a 50 Ohm transmission line loading model.  For the details of this model, 
+   and for more information on accounting for different loading conditions, 
+   please see the device datasheet.
+INFO:Timing:3390 - This architecture does not support a default System Jitter 
+   value, please add SYSTEM_JITTER constraint to the UCF to modify the Clock 
+   Uncertainty calculation.
+INFO:Timing:3389 - This architecture does not support 'Discrete Jitter' and 
+   'Phase Error' calculations, these terms will be zero in the Clock 
+   Uncertainty calculation.  Please make appropriate modification to 
+   SYSTEM_JITTER to account for the unsupported Discrete Jitter and Phase 
+   Error.
+
+
+
+Data Sheet report:
+-----------------
+All values displayed in nanoseconds (ns)
+
+Setup/Hold to clock clk
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+rst         |    2.476(R)|    0.119(R)|clk_BUFGP         |   0.000|
+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock code<0>
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+code<2>     |    0.036(F)|    4.313(F)|x_in_mux0000<23>  |   0.000|
+------------+------------+------------+------------------+--------+
+
+Setup/Hold to clock code<1>
+------------+------------+------------+------------------+--------+
+            |Max Setup to|Max Hold to |                  | Clock  |
+Source      | clk (edge) | clk (edge) |Internal Clock(s) | Phase  |
+------------+------------+------------+------------------+--------+
+code<2>     |    0.001(F)|    4.357(F)|x_in_mux0000<23>  |   0.000|
+------------+------------+------------+------------------+--------+
+
+Clock clk to Pad
+----------------+------------+------------------+--------+
+                | clk (edge) |                  | Clock  |
+Destination     |   to PAD   |Internal Clock(s) | Phase  |
+----------------+------------+------------------+--------+
+bit_out         |   16.251(R)|clk_BUFGP         |   0.000|
+current_s_out<0>|    5.779(R)|clk_BUFGP         |   0.000|
+current_s_out<1>|    5.777(R)|clk_BUFGP         |   0.000|
+----------------+------------+------------------+--------+
+
+Clock to Setup on destination clock Start
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+clk            |         |         |    4.450|         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock clk
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+Start          |         |   14.218|         |         |
+clk            |    9.930|         |         |         |
+code<0>        |         |   11.708|         |         |
+code<1>        |         |   11.708|         |         |
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock code<0>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+code<0>        |         |         |   -1.332|   -1.332|
+code<1>        |         |         |   -0.336|   -0.336|
+---------------+---------+---------+---------+---------+
+
+Clock to Setup on destination clock code<1>
+---------------+---------+---------+---------+---------+
+               | Src:Rise| Src:Fall| Src:Rise| Src:Fall|
+Source Clock   |Dest:Rise|Dest:Rise|Dest:Fall|Dest:Fall|
+---------------+---------+---------+---------+---------+
+code<0>        |         |         |   -1.367|   -1.367|
+code<1>        |         |         |   -0.371|   -0.371|
+---------------+---------+---------+---------+---------+
+
+Pad to Pad
+---------------+---------------+---------+
+Source Pad     |Destination Pad|  Delay  |
+---------------+---------------+---------+
+Start          |LED3           |    6.372|
+code<0>        |LED0           |    4.792|
+code<1>        |LED1           |    4.261|
+code<2>        |LED2           |    4.264|
+rst            |LED4           |    4.793|
+---------------+---------------+---------+
+
+
+Analysis completed Tue Jul 29 15:50:50 2014 
+--------------------------------------------------------------------------------
+
+Trace Settings:
+-------------------------
+Trace Settings 
+
+Peak Memory Usage: 137 MB
+
+
+

@@ -1,0 +1,3 @@
+vhdl isim_temp "Controller.vhd"
+vhdl isim_temp "Controller_TestBench.vhd"
+vhdl isim_temp "Schematic.vhf"

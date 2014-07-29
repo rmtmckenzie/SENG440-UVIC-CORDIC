@@ -1,0 +1,15 @@
+[Inputs]
+start
+rst
+clk
+=code[2:0]=
+[Outputs]
+op
+input_en
+output_en
+done
+=m[1:0]=
+=i[4:0]=
+=next_s[1:0]=
+=current_s[1:0]=
+[BiDir]

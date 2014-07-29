@@ -1,0 +1,7 @@
+vhdl work "cordic_package.vhd"
+vhdl work "slow_clk.vhd"
+vhdl work "SerialTx.vhd"
+vhdl work "uart.vhd"
+vhdl work "send_data.vhd"
+vhdl work "ascii.vhd"
+vhdl work "parallel_2_serial.vhd"

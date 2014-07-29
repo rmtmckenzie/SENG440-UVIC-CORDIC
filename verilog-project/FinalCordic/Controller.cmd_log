@@ -1,0 +1,8 @@
+vhdtdtfi -lib work Controller.vhd -prj FinalCordic -o Controller.spl -module Controller -template C:/Xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Controller.spl C:/Users/jdparry/Documents/FinalCordic/FinalCordic/Controller.sym 
+vhdtdtfi -lib work Controller.vhd -prj FinalCordic -o Controller.spl -module Controller -template C:/Xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Controller.spl {C:/Users/kloftis/Downloads/FinalCordic 2014-07-16/FinalCordic/Controller.sym} 
+vhdtdtfi -lib work Controller.vhd -prj FinalCordic -o Controller.spl -module Controller -template C:/Xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Controller.spl {C:/Users/jdparry/Downloads/FinalCordic w UART1/FinalCordic/Controller.sym} 
+vhdtdtfi -lib work Controller.vhd -prj FinalCordic -o Controller.spl -module Controller -template C:/Xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Controller.spl C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Controller.sym 

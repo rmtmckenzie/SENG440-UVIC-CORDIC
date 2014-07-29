@@ -1,0 +1,4 @@
+vhdtdtfi -lib work X_AddSub.vhd -prj FinalCordic -o X_AddSub.spl -module X_AddSub -template C:/Xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e X_AddSub.spl C:/Users/jdparry/Documents/FinalCordic/FinalCordic/X_AddSub.sym 
+vhdtdtfi -lib work X_AddSub.vhd -prj FinalCordic -o X_AddSub.spl -module X_AddSub -template C:/Xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e X_AddSub.spl C:/Users/jdparry/Documents/FinalCordic/FinalCordic/X_AddSub.sym 

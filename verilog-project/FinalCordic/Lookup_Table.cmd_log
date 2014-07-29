@@ -1,0 +1,8 @@
+vhdtdtfi -lib work Lookup_Table.vhd -prj FinalCordic -o Lookup_Table.spl -module Lookup_Table -template C:/Xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Lookup_Table.spl C:/Users/jdparry/Documents/FinalCordic/FinalCordic/Lookup_Table.sym 
+vhdtdtfi -lib work Lookup_Table.vhd -prj FinalCordic -o Lookup_Table.spl -module Lookup_Table -template C:/Xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Lookup_Table.spl C:/Users/jdparry/Documents/FinalCordic/FinalCordic/Lookup_Table.sym 
+vhdtdtfi -lib work Lookup_Table.vhd -prj FinalCordic -o Lookup_Table.spl -module Lookup_Table -template C:/Xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Lookup_Table.spl C:/Users/jdparry/Documents/FinalCordic/FinalCordic/Lookup_Table.sym 
+vhdtdtfi -lib work Lookup_Table.vhd -prj FinalCordic -o Lookup_Table.spl -module Lookup_Table -template C:/Xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Lookup_Table.spl {C:/Users/kloftis/Downloads/FinalCordic 2014-07-16/FinalCordic/Lookup_Table.sym} 

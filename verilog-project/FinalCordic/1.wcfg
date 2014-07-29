@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wave_config>
+   <wave_state>
+   </wave_state>
+   <db_ref_list>
+      <db_ref path="C:/Users/kloftis/Downloads/FinalCordic 2014-07-15/FinalCordic/ALU_ALU_sch_tb_isim_beh.wdb" id="1" type="auto">
+         <top_modules>
+            <top_module name="alu_alu_sch_tb" />
+            <top_module name="numeric_std" />
+            <top_module name="std_logic_1164" />
+            <top_module name="std_logic_arith" />
+            <top_module name="std_logic_unsigned" />
+            <top_module name="vcomponents" />
+         </top_modules>
+      </db_ref>
+   </db_ref_list>
+   <WVObjectSize size="10" />
+   <wvobject fp_name="/alu_alu_sch_tb/y" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">y[31:0]</obj_property>
+      <obj_property name="ObjectShortName">y[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_alu_sch_tb/m" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">m[1:0]</obj_property>
+      <obj_property name="ObjectShortName">m[1:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_alu_sch_tb/z" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">z[31:0]</obj_property>
+      <obj_property name="ObjectShortName">z[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_alu_sch_tb/theta" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">theta[31:0]</obj_property>
+      <obj_property name="ObjectShortName">theta[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_alu_sch_tb/z_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">z_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">z_out[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_alu_sch_tb/x_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">x_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">x_out[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_alu_sch_tb/y_out" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">y_out[31:0]</obj_property>
+      <obj_property name="ObjectShortName">y_out[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_alu_sch_tb/x" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">x[31:0]</obj_property>
+      <obj_property name="ObjectShortName">x[31:0]</obj_property>
+      <obj_property name="Radix">HEXRADIX</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_alu_sch_tb/u" type="logic" db_ref_id="1">
+      <obj_property name="ElementShortName">u</obj_property>
+      <obj_property name="ObjectShortName">u</obj_property>
+   </wvobject>
+   <wvobject fp_name="/alu_alu_sch_tb/i" type="array" db_ref_id="1">
+      <obj_property name="ElementShortName">i[4:0]</obj_property>
+      <obj_property name="ObjectShortName">i[4:0]</obj_property>
+   </wvobject>
+</wave_config>

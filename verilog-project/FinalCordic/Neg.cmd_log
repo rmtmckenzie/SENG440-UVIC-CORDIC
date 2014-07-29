@@ -1,0 +1,2 @@
+vhdtdtfi -lib work XOR.vhd -prj FinalCordic -o Neg.spl -module Neg -template C:/Xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e Neg.spl C:/Users/jdparry/Documents/FinalCordic/FinalCordic/Neg.sym 

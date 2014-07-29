@@ -1,0 +1,12 @@
+#-----------------------------------------------------------
+# PlanAhead v13.4
+# Build 157570 by hdbuild on Fri Dec 16 12:55:36 MST 2011
+# Start of session at: Thu Jul 24 13:59:39 2014
+# Process ID: 304
+# Log file: C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/planAhead_run_1/planAhead.log
+# Journal file: C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/planAhead_run_1/planAhead.jou
+#-----------------------------------------------------------
+start_gui
+source C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/pa.fromHdl.tcl
+exit
+stop_gui

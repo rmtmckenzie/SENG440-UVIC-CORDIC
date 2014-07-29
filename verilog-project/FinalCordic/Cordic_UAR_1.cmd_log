@@ -1,0 +1,311 @@
+vhdtdtfi -lib work cordic_package.vhd -lib work X_AddSub.vhd -lib work XOR.vhd -lib work slow_clk.vhd -lib work Shifter.vhd -lib work SerialTx.vhd -lib work AddSub.vhd -lib work uart.vhd -lib work send_data.vhd -lib work RegisterBank.vhd -lib work MultiplexerOutput.vhd -lib work MultiplexerInput.vhd -lib work Lookup_Table.vhd -lib work Controller.vhd -lib work Comparator.vhd -lib work ascii.vhd -lib work parallel_2_serial.vhd -lib work Cordic_UAR_1.vhd -prj FinalCordic -o Cordic_UAR_1.spl -module Cordic_UAR_1 -template C:/Xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Cordic_UAR_1.spl {C:/Users/jdparry/Downloads/FinalCordic w UART1/FinalCordic/Cordic_UAR_1.sym} 
+vhdtdtfi -lib work cordic_package.vhd -lib work X_AddSub.vhd -lib work XOR.vhd -lib work slow_clk.vhd -lib work Shifter.vhd -lib work SerialTx.vhd -lib work AddSub.vhd -lib work uart.vhd -lib work send_data.vhd -lib work RegisterBank.vhd -lib work MultiplexerOutput.vhd -lib work MultiplexerInput.vhd -lib work Lookup_Table.vhd -lib work Controller.vhd -lib work Comparator.vhd -lib work ascii.vhd -lib work parallel_2_serial.vhd -lib work Cordic_UAR_1.vhd -prj FinalCordic -o Cordic_UAR_1.spl -module Cordic_UAR_1 -template C:/Xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Cordic_UAR_1.spl {C:/Users/jdparry/Downloads/FinalCordic w UART1/FinalCordic/Cordic_UAR_1.sym} 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordic w UART1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordic w UART1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 "Cordic_UAR_1.ngc" Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordic w UART1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordic w UART1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 "Cordic_UAR_1.ngc" Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordic w UART1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordic w UART1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 "Cordic_UAR_1.ngc" Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/kloftis/Downloads/FinalCordic1/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
+xst -intstyle ise -ifn "C:/Users/jdparry/Downloads/FUCKYEAHBITCHES!!!/FinalCordic/Cordic_UAR_1.xst" -ofn "C:/Users/jdparry/Downloads/FUCKYEAHBITCHES!!!/FinalCordic/Cordic_UAR_1.syr" 
+ngdbuild -intstyle ise -dd _ngo -nt timestamp -uc Cordic_UAR_1.ucf -p xc3s1200e-fg320-5 Cordic_UAR_1.ngc Cordic_UAR_1.ngd  
+map -intstyle ise -p xc3s1200e-fg320-5 -cm area -ir off -pr off -c 100 -o Cordic_UAR_1_map.ncd Cordic_UAR_1.ngd Cordic_UAR_1.pcf 
+par -w -intstyle ise -ol high -t 1 Cordic_UAR_1_map.ncd Cordic_UAR_1.ncd Cordic_UAR_1.pcf 
+trce -intstyle ise -v 3 -s 5 -n 3 -fastpaths -xml Cordic_UAR_1.twx Cordic_UAR_1.ncd -o Cordic_UAR_1.twr Cordic_UAR_1.pcf -ucf Cordic_UAR_1.ucf 
+bitgen -intstyle ise -f Cordic_UAR_1.ut Cordic_UAR_1.ncd 
