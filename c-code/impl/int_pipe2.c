@@ -1,6 +1,6 @@
 
 // memory alias disambiguation - restrict
-void int_pipe(int* restrict theta, int* restrict x, int* restrict y, const int * restrict lookup)
+void int_pipe2(int* restrict theta, int* restrict x, int* restrict y, const int * restrict lookup)
 {
 
     int nx, ny, nz;
@@ -20,13 +20,15 @@ void int_pipe(int* restrict theta, int* restrict x, int* restrict y, const int *
             nx = lx - (ly >> i);
             ny = ly + (lx >> i);
             nz = lz - lkv;
+            lx = nx; ly = ny; lz = nz;
+            lkv = lookup[i];
         } else {
             nx = lx + (ly >> i);
             ny = ly - (lx >> i);
             nz = lz + lkv;
+            lx = nx; ly = ny; lz = nz;
+            lkv = lookup[i];
         }
-        lkv = lookup[i];
-        lx = nx; ly = ny; lz = nz;
     }
 
     *x = lx;

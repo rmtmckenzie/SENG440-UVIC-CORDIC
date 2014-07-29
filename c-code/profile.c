@@ -11,6 +11,7 @@
 //#define RUNROLL2
 //#define RUNROLL4
 #define RPIPE
+#define RPIPE2
 
 #include "impl/int_basic.c"
 #include "impl/int_opt.c"
@@ -18,7 +19,7 @@
 #include "impl/int_unroll2.c"
 #include "impl/int_unroll4.c"
 #include "impl/int_pipe.c"
-#include "impl/int_hardcode.c"
+#include "impl/int_pipe2.c"
 
 /* 
 Optimizations:
@@ -124,5 +125,14 @@ int main(int argc, char *argv[])
     printf("Pipe: %f\n",(double) (clock() - before) / CLOCKS_PER_SEC);
 #endif
 
+#ifdef RPIPE2
+    before = clock();
+    for(int i = 0; i < num; i++,
+            x = rand() % 10000 + 1000,
+            y = rand() % 10000 + 1000,
+            z = rand() % HALFPI2)
+        int_pipe2   (&x, &y, &z, LOOKUP2);
+    printf("Pipe2: %f\n",(double) (clock() - before) / CLOCKS_PER_SEC);
+#endif
     return 0;
 }
