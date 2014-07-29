@@ -13,7 +13,6 @@ void int_unroll2(int* restrict theta, int* restrict x, int* restrict y, const in
     ly = *y;
     lz = *theta;
     
-
     for(; i < NUM_ELEMENTS; i++, j++) {
         //1
         if(!(lz & 0x80000000)){
