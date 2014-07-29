@@ -66,7 +66,7 @@ int main(int argc, char *argv[])
             y = rand() % 10000 + 1000,
             z = rand() % HALFPI2)
         int_basic   (&x, &y, &z, LOOKUP2);
-    printf("Basic: %f\n",(float) (clock() - before) / CLOCKS_PER_SEC);
+    printf("Basic: %f\n",(double) (clock() - before) / CLOCKS_PER_SEC);
 
     before = clock();
     for(int i = 0; i < num; i++,
@@ -74,7 +74,7 @@ int main(int argc, char *argv[])
             y = rand() % 10000 + 1000,
             z = rand() % HALFPI2)
         int_opt     (&x, &y, &z, LOOKUP2);
-    printf("Opt: %f\n",(float) (clock() - before) / CLOCKS_PER_SEC);
+    printf("Opt: %f\n",(double) (clock() - before) / CLOCKS_PER_SEC);
 
     before = clock();
     for(int i = 0; i < num; i++, 
@@ -82,7 +82,7 @@ int main(int argc, char *argv[])
             y = rand() % 10000 + 1000, 
             z = rand() % HALFPI2)
         int_opt2    (&x, &y, &z, LOOKUP2);
-    printf("Opt2: %f\n",(float) (clock() - before) / CLOCKS_PER_SEC);
+    printf("Opt2: %f\n",(double) (clock() - before) / CLOCKS_PER_SEC);
 
     before = clock();
     for(int i = 0; i < num; i++, 
@@ -90,7 +90,7 @@ int main(int argc, char *argv[])
             y = rand() % 10000 + 1000, 
             z = rand() % HALFPI2)
         int_unroll2 (&x, &y, &z, LOOKUP2);
-    printf("Unroll2: %f\n",(float) (clock() - before) / CLOCKS_PER_SEC);
+    printf("Unroll2: %f\n",(double) (clock() - before) / CLOCKS_PER_SEC);
 
     before = clock();
     for(int i = 0; i < num; i++, 
@@ -98,7 +98,7 @@ int main(int argc, char *argv[])
             y = rand() % 10000 + 1000, 
             z = rand() % HALFPI2)
         int_unroll4 (&x, &y, &z, LOOKUP2);
-    printf("Unroll4: %f\n",(float) (clock() - before) / CLOCKS_PER_SEC);
+    printf("Unroll4: %f\n",(double) (clock() - before) / CLOCKS_PER_SEC);
 
     before = clock();
     for(int i = 0; i < num; i++,
@@ -106,7 +106,7 @@ int main(int argc, char *argv[])
             y = rand() % 10000 + 1000,
             z = rand() % HALFPI2)
         int_pipe    (&x, &y, &z, LOOKUP2);
-    printf("Pipe: %f\n",(float) (clock() - before) / CLOCKS_PER_SEC);
+    printf("Pipe: %f\n",(double) (clock() - before) / CLOCKS_PER_SEC);
 
 /*
     for(int i = 0; i < num; i++) {

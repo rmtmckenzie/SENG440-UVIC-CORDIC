@@ -20,13 +20,15 @@ void int_pipe(int* restrict theta, int* restrict x, int* restrict y, const int *
             nx = lx - (ly >> i);
             ny = ly + (lx >> i);
             nz = lz - lkv;
+            lkv = lookup[i];
+            lx = nx; ly = ny; lz = nz;
         } else {
             nx = lx + (ly >> i);
             ny = ly - (lx >> i);
             nz = lz + lkv;
+            lkv = lookup[i];
+            lx = nx; ly = ny; lz = nz;
         }
-        lkv = lookup[i];
-        lx = nx; ly = ny; lz = nz;
     }
 
     *x = lx;
