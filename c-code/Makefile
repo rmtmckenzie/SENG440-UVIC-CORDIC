@@ -1,13 +1,14 @@
 all: profiler profiler_opt
+arm: profiler_arm profiler_arm_opt
 
 valuetester:
 	gcc -Wall -pg -std=c99 -o build/valuetester valuetester.c
 
 profiler_arm:
-	arm-linux-gcc -Wall -pg -std=c99 -o build_arm/profiler profile.c
+	arm-linux-gcc -Wall --static -std=c99 -o build_arm/profiler profile.c
 
 profiler_arm_opt:
-	arm-linux-gcc -O2 -Wall -pg -std=c99 -o build_arm/profiler_opt profile.c
+	arm-linux-gcc -O2 -Wall  --static -std=c99 -o build_arm/profiler_opt profile.c
 
 profiler:
 	gcc -Wall -pg -std=c99 -o build/profile profile.c
