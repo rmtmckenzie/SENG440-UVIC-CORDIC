@@ -20,4 +20,6 @@ cordic_float:
 	gcc -Wall -O3 -std=c99 -g -o build/cordicfloat cordic_float.c
 
 clean:
-	rm -f cordic.o cordic.s build/profile* build/value* build/gmon.out build/*.stats temp*
+	rm -f cordic.o cordic.s 
+	rm -f build/profile* build/value* build/gmon.out build/*.stats build/temp*
+	rm -f build_arm/profile* 
