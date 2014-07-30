@@ -12,179 +12,179 @@ extern inline void int_hardcode(int* restrict theta, int* restrict x, int* restr
     ly = *y;
     lz = *theta;
         
-    if(!(lz & 0x80000000)){
-        nx = lx - (ly >> 0);
-        ny = ly + (lx >> 0);
-        nz = lz - 0x6487; 
-    } else {
+    if(lz & 0x80000000){
         nx = lx + (ly >> 0);
         ny = ly - (lx >> 0);
-        nz = lz + 0x6487;
+        nz = lz + 0x3243;
+    } else {
+        nx = lx - (ly >> 0);
+        ny = ly + (lx >> 0);
+        nz = lz - 0x3243; 
     }
     lx = nx; ly = ny; lz = nz;
     
-    if(!(lz & 0x80000000)){
-        nx = lx - (ly >> 1);
-        ny = ly + (lx >> 1);
-        nz = lz - 0x3B58; 
-    } else {
+    if(lz & 0x80000000){
         nx = lx + (ly >> 1);
         ny = ly - (lx >> 1);
-        nz = lz + 0x3B58;
+        nz = lz + 0x1DAB;
+    } else {
+        nx = lx - (ly >> 1);
+        ny = ly + (lx >> 1);
+        nz = lz - 0x1DAB; 
     }
     lx = nx; ly = ny; lz = nz;
     
-    if(!(lz & 0x80000000)){
-        nx = lx - (ly >> 2);
-        ny = ly + (lx >> 2);
-        nz = lz - 0x1F5A; 
-    } else {
+    if(lz & 0x80000000){
         nx = lx + (ly >> 2);
         ny = ly - (lx >> 2);
-        nz = lz + 0x1F5A;
+        nz = lz + 0xFAD;
+    } else {
+        nx = lx - (ly >> 2);
+        ny = ly + (lx >> 2);
+        nz = lz - 0xFAD; 
     }
     lx = nx; ly = ny; lz = nz;
     
-    if(!(lz & 0x80000000)){
-        nx = lx - (ly >> 3);
-        ny = ly + (lx >> 3);
-        nz = lz - 0xFEA; 
-    } else {
+    if(lz & 0x80000000){
         nx = lx + (ly >> 3);
         ny = ly - (lx >> 3);
-        nz = lz + 0xFEA;
+        nz = lz + 0x7F4;
+    } else {
+        nx = lx - (ly >> 3);
+        ny = ly + (lx >> 3);
+        nz = lz - 0x7F4; 
     }
     lx = nx; ly = ny; lz = nz;
     
-    if(!(lz & 0x80000000)){
-        nx = lx - (ly >> 4);
-        ny = ly + (lx >> 4);
-        nz = lz - 0x7FC; 
-    } else {
+    if(lz & 0x80000000){
         nx = lx + (ly >> 4);
         ny = ly - (lx >> 4);
-        nz = lz + 0x7FC;
+        nz = lz + 0x3FE;
+    } else {
+        nx = lx - (ly >> 4);
+        ny = ly + (lx >> 4);
+        nz = lz - 0x3FE;
     }
     lx = nx; ly = ny; lz = nz;
     
-    if(!(lz & 0x80000000)){
-        nx = lx - (ly >> 5);
-        ny = ly + (lx >> 5);
-        nz = lz - 0x3FF; 
-    } else {
+    if(lz & 0x80000000){
         nx = lx + (ly >> 5);
         ny = ly - (lx >> 5);
-        nz = lz + 0x3FF;
+        nz = lz + 0x1FF;
+    } else {
+        nx = lx - (ly >> 5);
+        ny = ly + (lx >> 5);
+        nz = lz - 0x1FF;
     }
     lx = nx; ly = ny; lz = nz;
     
-    if(!(lz & 0x80000000)){
-        nx = lx - (ly >> 6);
-        ny = ly + (lx >> 6);
-        nz = lz - 0x1FF; 
-    } else {
+    if(lz & 0x80000000){
         nx = lx + (ly >> 6);
         ny = ly - (lx >> 6);
-        nz = lz + 0x1FF;
+        nz = lz + 0xFF;
+    } else {
+        nx = lx - (ly >> 6);
+        ny = ly + (lx >> 6);
+        nz = lz - 0xFF;
     }
     lx = nx; ly = ny; lz = nz;
     
-    if(!(lz & 0x80000000)){
-        nx = lx - (ly >> 7);
-        ny = ly + (lx >> 7);
-        nz = lz - 0xFF; 
-    } else {
+    if(lz & 0x80000000){
         nx = lx + (ly >> 7);
         ny = ly - (lx >> 7);
-        nz = lz + 0xFF;
+        nz = lz + 0x7F;
+    } else {
+        nx = lx - (ly >> 7);
+        ny = ly + (lx >> 7);
+        nz = lz - 0x7F;
     }
     lx = nx; ly = ny; lz = nz;
     
-    if(!(lz & 0x80000000)){
-        nx = lx - (ly >> 8);
-        ny = ly + (lx >> 8);
-        nz = lz - 0x7F; 
-    } else {
+    if(lz & 0x80000000){
         nx = lx + (ly >> 8);
         ny = ly - (lx >> 8);
-        nz = lz + 0x7F;
+        nz = lz + 0x3F;
+    } else {
+        nx = lx - (ly >> 8);
+        ny = ly + (lx >> 8);
+        nz = lz - 0x3F;
     }
     lx = nx; ly = ny; lz = nz;
     
-    if(!(lz & 0x80000000)){
-        nx = lx - (ly >> 9);
-        ny = ly + (lx >> 9);
-        nz = lz - 0x3F; 
-    } else {
+    if(lz & 0x80000000){
         nx = lx + (ly >> 9);
         ny = ly - (lx >> 9);
-        nz = lz + 0x3F;
+        nz = lz + 0x1F;
+    } else {
+        nx = lx - (ly >> 9);
+        ny = ly + (lx >> 9);
+        nz = lz - 0x1F;
     }
     lx = nx; ly = ny; lz = nz;
     
-    if(!(lz & 0x80000000)){
-        nx = lx - (ly >> 10);
-        ny = ly + (lx >> 10);
-        nz = lz - 0x1F; 
-    } else {
+    if(lz & 0x80000000){
         nx = lx + (ly >> 10);
         ny = ly - (lx >> 10);
-        nz = lz + 0x1F;
+        nz = lz + 0xF;
+    } else {
+        nx = lx - (ly >> 10);
+        ny = ly + (lx >> 10);
+        nz = lz - 0xF;
     }
     lx = nx; ly = ny; lz = nz;
     
-    if(!(lz & 0x80000000)){
-        nx = lx - (ly >> 11);
-        ny = ly + (lx >> 11);
-        nz = lz - 0xF; 
-    } else {
+    if(lz & 0x80000000){
         nx = lx + (ly >> 11);
         ny = ly - (lx >> 11);
-        nz = lz + 0xF;
+        nz = lz + 0x7;
+    } else {
+        nx = lx - (ly >> 11);
+        ny = ly + (lx >> 11);
+        nz = lz - 0x7;
     }
     lx = nx; ly = ny; lz = nz;
     
-    if(!(lz & 0x80000000)){
-        nx = lx - (ly >> 12);
-        ny = ly + (lx >> 12);
-        nz = lz - 0x7; 
-    } else {
+    if(lz & 0x80000000){
         nx = lx + (ly >> 12);
         ny = ly - (lx >> 12);
-        nz = lz + 0x7;
+        nz = lz + 0x3;
+    } else {
+        nx = lx - (ly >> 12);
+        ny = ly + (lx >> 12);
+        nz = lz - 0x3; 
     }
     lx = nx; ly = ny; lz = nz;
     
-    if(!(lz & 0x80000000)){
-        nx = lx - (ly >> 13);
-        ny = ly + (lx >> 13);
-        nz = lz - 0x3; 
-    } else {
+    if(lz & 0x80000000){
         nx = lx + (ly >> 13);
         ny = ly - (lx >> 13);
-        nz = lz + 0x3;
+        nz = lz + 0x1;
+    } else {
+        nx = lx - (ly >> 13);
+        ny = ly + (lx >> 13);
+        nz = lz - 0x1; 
     }
     lx = nx; ly = ny; lz = nz;
     
-    if(!(lz & 0x80000000)){
-        nx = lx - (ly >> 14);
-        ny = ly + (lx >> 14);
-        nz = lz - 0x1; 
-    } else {
+    if(lz & 0x80000000){
         nx = lx + (ly >> 14);
         ny = ly - (lx >> 14);
-        nz = lz + 0x1;
+        nz = lz + 0x0;
+    } else {
+        nx = lx - (ly >> 14);
+        ny = ly + (lx >> 14);
+        nz = lz - 0x0; 
     }
     lx = nx; ly = ny; lz = nz;
     
-    if(!(lz & 0x80000000)){
-        nx = lx - (ly >> 15);
-        ny = ly + (lx >> 15);
-        nz = lz - 0x0; 
-    } else {
+    if(lz & 0x80000000){
         nx = lx + (ly >> 15);
         ny = ly - (lx >> 15);
         nz = lz + 0x0;
+    } else {
+        nx = lx - (ly >> 15);
+        ny = ly + (lx >> 15);
+        nz = lz - 0x0; 
     }
     lx = nx; ly = ny; lz = nz;
     

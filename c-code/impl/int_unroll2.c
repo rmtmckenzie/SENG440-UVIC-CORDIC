@@ -15,26 +15,26 @@ extern inline void int_unroll2(int* restrict theta, int* restrict x, int* restri
     
     for(; i < NUM_ELEMENTS; i+=2, j+=2) {
         //1
-        if(!(lz & 0x80000000)){
-            nx = lx - (ly >> i);
-            ny = ly + (lx >> i);
-            nz = lz - lookup[i];
-        } else {
+        if(lz & 0x80000000){
             nx = lx + (ly >> i);
             ny = ly - (lx >> i);
             nz = lz + lookup[i];
+        } else {
+            nx = lx - (ly >> i);
+            ny = ly + (lx >> i);
+            nz = lz - lookup[i];
         }
         lx = nx; ly = ny; lz = nz;
         
         //2
-        if(!(lz & 0x80000000)){
-            nx = lx - (ly >> j);
-            ny = ly + (lx >> j);
-            nz = lz - lookup[j];
-        } else {
+        if(lz & 0x80000000){
             nx = lx + (ly >> j);
             ny = ly - (lx >> j);
             nz = lz + lookup[j];
+        } else {
+            nx = lx - (ly >> j);
+            ny = ly + (lx >> j);
+            nz = lz - lookup[j];
         }
         lx = nx; ly = ny; lz = nz;
         

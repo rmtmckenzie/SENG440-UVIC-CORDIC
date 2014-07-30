@@ -16,50 +16,50 @@ extern inline void int_unroll4(int* restrict theta, int* restrict x, int* restri
 
     for(; i < NUM_ELEMENTS; i+=4,j+=4,k+=4,l+=4) {
         //1
-        if(!(lz & 0x80000000)){
-            nx = lx - (ly >> i);
-            ny = ly + (lx >> i);
-            nz = lz - lookup[i];
-        } else {
+        if(lz & 0x80000000){
             nx = lx + (ly >> i);
             ny = ly - (lx >> i);
             nz = lz + lookup[i];
+        } else {
+            nx = lx - (ly >> i);
+            ny = ly + (lx >> i);
+            nz = lz - lookup[i];
         }
         lx = nx; ly = ny; lz = nz;
         
         //2
-        if(!(lz & 0x80000000)){
-            nx = lx - (ly >> j);
-            ny = ly + (lx >> j);
-            nz = lz - lookup[j];
-        } else {
+        if(lz & 0x80000000){
             nx = lx + (ly >> j);
             ny = ly - (lx >> j);
             nz = lz + lookup[j];
+        } else {
+            nx = lx - (ly >> j);
+            ny = ly + (lx >> j);
+            nz = lz - lookup[j];
         }
         lx = nx; ly = ny; lz = nz;
         
         //3
-        if(!(lz & 0x80000000)){
-            nx = lx - (ly >> k);
-            ny = ly + (lx >> k);
-            nz = lz - lookup[k];
-        } else {
+        if(lz & 0x80000000){
             nx = lx + (ly >> k);
             ny = ly - (lx >> k);
             nz = lz + lookup[k];
+        } else {
+            nx = lx - (ly >> k);
+            ny = ly + (lx >> k);
+            nz = lz - lookup[k];
         }
         lx = nx; ly = ny; lz = nz;
 
         //4
-        if(!(lz & 0x80000000)){
-            nx = lx - (ly >> l);
-            ny = ly + (lx >> l);
-            nz = lz - lookup[l];
-        } else {
+        if(lz & 0x80000000){
             nx = lx + (ly >> l);
             ny = ly - (lx >> l);
             nz = lz + lookup[l];
+        } else {
+            nx = lx - (ly >> l);
+            ny = ly + (lx >> l);
+            nz = lz - lookup[l];
         }
         lx = nx; ly = ny; lz = nz;
     }
