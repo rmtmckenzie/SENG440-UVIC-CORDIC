@@ -14,7 +14,7 @@ extern inline void int_unroll4(int* restrict theta, int* restrict x, int* restri
     lz = *theta;
     
 
-    for(; i < NUM_ELEMENTS; i++) {
+    for(; i < NUM_ELEMENTS; i+=4,j+=4,k+=4,l+=4) {
         //1
         if(!(lz & 0x80000000)){
             nx = lx - (ly >> i);

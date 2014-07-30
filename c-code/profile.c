@@ -9,11 +9,11 @@
 
 #include "defines.h"
 
-//#define RBASIC
-//#define ROPT
+#define RBASIC
+#define ROPT
 #define ROPT2
-//#define RUNROLL2
-//#define RUNROLL4
+#define RUNROLL2
+#define RUNROLL4
 #define RPIPE
 #define RPIPE2
 #define RHARDCODE
@@ -90,81 +90,89 @@ int main(int argc, char *argv[])
 
 #ifdef RBASIC
     before = gettime();
-    for(int i = 0; i < num; i++,
-            x = randomvals[i % MAXRANDS],
-            y = randomvals[MAXRANDS - i % MAXRANDS],
-            z = randomangles[i % MAXRANDS])
+    for(int i = 0; i < num; i++){
+        x = randomvals[i % MAXRANDS];
+        y = randomvals[MAXRANDS - i % MAXRANDS];
+        z = randomangles[i % MAXRANDS];
         int_basic(&x, &y, &z, LOOKUP2);
+    }
     printf("Basic: %f\n",(double) (gettime() - before) / sysconf(_SC_CLK_TCK));
 #endif
 
 #ifdef ROPT
     before = gettime();
-    for(int i = 0; i < num; i++,
-            x = randomvals[i % MAXRANDS],
-            y = randomvals[MAXRANDS - i % MAXRANDS],
-            z = randomangles[i % MAXRANDS])
+    for(int i = 0; i < num; i++){
+        x = randomvals[i % MAXRANDS];
+        y = randomvals[MAXRANDS - i % MAXRANDS];
+        z = randomangles[i % MAXRANDS];
         int_opt(&x, &y, &z, LOOKUP2);
+    }
     printf("Opt: %f\n",(double) (gettime() - before) / ticks_per_sec);
 #endif
 
 #ifdef ROPT2
     before = gettime();
-    for(int i = 0; i < num; i++,
-            x = randomvals[i % MAXRANDS],
-            y = randomvals[MAXRANDS - i % MAXRANDS],
-            z = randomangles[i % MAXRANDS])
+    for(int i = 0; i < num; i++){
+        x = randomvals[i % MAXRANDS];
+        y = randomvals[MAXRANDS - i % MAXRANDS];
+        z = randomangles[i % MAXRANDS];
         int_opt2(&x, &y, &z, LOOKUP2);
+    }
     printf("Opt2: %f\n",(double) (gettime() - before) / ticks_per_sec);
 #endif
 
 #ifdef RUNROLL2
     before = gettime();
-    for(int i = 0; i < num; i++,
-            x = randomvals[i % MAXRANDS],
-            y = randomvals[MAXRANDS - i % MAXRANDS],
-            z = randomangles[i % MAXRANDS])
+    for(int i = 0; i < num; i++){
+        x = randomvals[i % MAXRANDS];
+        y = randomvals[MAXRANDS - i % MAXRANDS];
+        z = randomangles[i % MAXRANDS];
         int_unroll2(&x, &y, &z, LOOKUP2);
+    }
     printf("Unroll2: %f\n",(double) (gettime() - before) / ticks_per_sec);
 #endif
 
 #ifdef RUNROLL4
     before = gettime();
-    for(int i = 0; i < num; i++, 
-            x = randomvals[i % MAXRANDS],
-            y = randomvals[MAXRANDS - i % MAXRANDS],
-            z = randomangles[i % MAXRANDS])
+    for(int i = 0; i < num; i++){
+        x = randomvals[i % MAXRANDS];
+        y = randomvals[MAXRANDS - i % MAXRANDS];
+        z = randomangles[i % MAXRANDS];
         int_unroll4(&x, &y, &z, LOOKUP2);
+    }
     printf("Unroll4: %f\n",(double) (gettime() - before) / ticks_per_sec);
 #endif
 
 #ifdef RPIPE
     before = gettime();
-    for(int i = 0; i < num; i++,
-            x = randomvals[i % MAXRANDS],
-            y = randomvals[MAXRANDS - i % MAXRANDS],
-            z = randomangles[i % MAXRANDS])
+    for(int i = 0; i < num; i++){
+        x = randomvals[i % MAXRANDS];
+        y = randomvals[MAXRANDS - i % MAXRANDS];
+        z = randomangles[i % MAXRANDS];
         int_pipe(&x, &y, &z, LOOKUP2);
+    }
     printf("Pipe: %f\n",(double) (gettime() - before) / ticks_per_sec);
 #endif
 
 #ifdef RPIPE2
     before = gettime();
-    for(int i = 0; i < num; i++,
-            x = randomvals[i % MAXRANDS],
-            y = randomvals[MAXRANDS - i % MAXRANDS],
-            z = randomangles[i % MAXRANDS])
+    for(int i = 0; i < num; i++){
+        x = randomvals[i % MAXRANDS];
+        y = randomvals[MAXRANDS - i % MAXRANDS];
+        z = randomangles[i % MAXRANDS];
         int_pipe2(&x, &y, &z, LOOKUP2);
+    }
     printf("Pipe2: %f\n",(double) (gettime() - before) / ticks_per_sec);
 #endif
 
 #ifdef RHARDCODE
     before=gettime();
-    for(int i = 0; i < num; i++,
-            x = randomvals[i % MAXRANDS],
-            y = randomvals[MAXRANDS - i % MAXRANDS],
-            z = randomangles[i % MAXRANDS])
-        int_pipe2(&x, &y, &z, LOOKUP2);
+    for(int i = 0; i < num; i++){
+        x = randomvals[i % MAXRANDS];
+        y = randomvals[MAXRANDS - i % MAXRANDS];
+        z = randomangles[i % MAXRANDS];
+        int_hardcode(&x, &y, &z, LOOKUP2);
+    }
     printf("Hardcode: %f\n",(double) (gettime() - before) / ticks_per_sec);
 #endif
 

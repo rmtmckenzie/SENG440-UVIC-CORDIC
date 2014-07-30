@@ -30,6 +30,8 @@
 
 c-code/build/profile*
 c-code/build/temp*
+c-code/build/validate*
 
 c-code/build_arm/profile*
 c-code/build_arm/temp*
+c-code/build_arm/validate*
