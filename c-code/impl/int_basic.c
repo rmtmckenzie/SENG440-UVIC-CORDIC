@@ -1,4 +1,4 @@
-void int_basic(int *theta, int *x, int *y, const int *lookup)
+extern inline void int_basic(int *theta, int *x, int *y, const int *lookup)
 {
     int sign;
 

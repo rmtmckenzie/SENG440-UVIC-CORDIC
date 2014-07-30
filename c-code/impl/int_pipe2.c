@@ -1,6 +1,6 @@
 
 // memory alias disambiguation - restrict
-void int_pipe2(int* restrict theta, int* restrict x, int* restrict y, const int * restrict lookup)
+extern inline void int_pipe2(int* restrict theta, int* restrict x, int* restrict y, const int * restrict lookup)
 {
 
     int nx, ny, nz;
