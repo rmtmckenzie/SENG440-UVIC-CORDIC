@@ -1,2 +1,2 @@
-vhdtdtfi -lib work AddSub.vhd -prj FinalCordic -o AddSub.spl -module AddSub -template C:/Xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3e AddSub.spl C:/Users/jdparry/Documents/FinalCordic/FinalCordic/AddSub.sym 
+vhdtdtfi -lib work AddSub.vhd -prj FinalCordic -o AddSub.spl -module AddSub -template /project/CMC/tools/Xilinx-13.4/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w AddSub.spl /home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/AddSub.sym 

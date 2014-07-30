@@ -1,2 +1,0 @@
-vhdtdtfi -lib work MultiplexerInput.vhd -prj FinalCordic -o MultiplexerInput.spl -module MultiplexerInput -template C:/Xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3e -w MultiplexerInput.spl C:/Users/jdparry/Documents/FinalCordic/FinalCordic/MultiplexerInput.sym 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <symbol version="7" name="AddSub">
     <symboltype>BLOCK</symboltype>
-    <timestamp>2014-7-15T21:28:33</timestamp>
+    <timestamp>2014-7-30T19:37:41</timestamp>
     <pin polarity="Input" x="0" y="-160" name="sel" />
     <pin polarity="Input" x="0" y="-96" name="a_in(31:0)" />
     <pin polarity="Input" x="0" y="-32" name="b_in(31:0)" />

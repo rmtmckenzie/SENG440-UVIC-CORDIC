@@ -1,11 +1,11 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <report-views version="2.0" >
  <header>
-  <DateModified>2014-07-15T15:04:23</DateModified>
+  <DateModified>2014-07-30T12:44:17</DateModified>
   <ModuleName>ALU</ModuleName>
   <SummaryTimeStamp>2014-07-15T15:04:22</SummaryTimeStamp>
-  <SavedFilePath>C:/Users/jdparry/Documents/FinalCordic/FinalCordic/iseconfig/ALU.xreport</SavedFilePath>
-  <ImplementationReportsDirectory>C:/Users/jdparry/Documents/FinalCordic/FinalCordic</ImplementationReportsDirectory>
+  <SavedFilePath>/home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/iseconfig/ALU.xreport</SavedFilePath>
+  <ImplementationReportsDirectory>/home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/</ImplementationReportsDirectory>
   <DateInitialized>2014-07-15T14:36:41</DateInitialized>
   <EnableMessageFiltering>false</EnableMessageFiltering>
  </header>

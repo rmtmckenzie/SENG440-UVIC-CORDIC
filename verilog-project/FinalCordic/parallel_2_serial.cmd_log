@@ -1,2 +1,0 @@
-vhdtdtfi -lib work cordic_package.vhd -lib work slow_clk.vhd -lib work SerialTx.vhd -lib work uart.vhd -lib work send_data.vhd -lib work ascii.vhd -lib work parallel_2_serial.vhd -prj FinalCordic -o parallel_2_serial.spl -module parallel_2_serial -template C:/Xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3e -w parallel_2_serial.spl C:/Users/kloftis/Downloads/FinalCordic_singleProcessVersion_July21b/FinalCordic_singleProcessVersion_July21/FinalCordic/parallel_2_serial.sym 

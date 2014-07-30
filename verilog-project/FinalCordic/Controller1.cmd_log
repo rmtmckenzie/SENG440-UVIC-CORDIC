@@ -1,1 +1,0 @@
-sch2hdl -intstyle ise -family spartan3e -flat -suppress -vhdl Controller1_drc.vhf -w {C:/Users/kloftis/Downloads/FinalCordic 2014-07-16/FinalCordic/Controller1.sch} 

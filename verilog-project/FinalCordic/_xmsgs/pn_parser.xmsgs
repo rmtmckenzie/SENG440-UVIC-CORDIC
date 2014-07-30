@@ -8,59 +8,5 @@
 <!-- Copyright (c) 1995-2011 Xilinx, Inc.  All rights reserved.    -->
 
 <messages>
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/jdparry/Downloads/FUCKYEAHBITCHES!!!/FinalCordic/AddSub.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/jdparry/Downloads/FUCKYEAHBITCHES!!!/FinalCordic/Comparator.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/jdparry/Downloads/FUCKYEAHBITCHES!!!/FinalCordic/Controller.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/jdparry/Downloads/FUCKYEAHBITCHES!!!/FinalCordic/Cordic_UAR_1.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/jdparry/Downloads/FUCKYEAHBITCHES!!!/FinalCordic/Lookup_Table.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/jdparry/Downloads/FUCKYEAHBITCHES!!!/FinalCordic/MultiplexerInput.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/jdparry/Downloads/FUCKYEAHBITCHES!!!/FinalCordic/MultiplexerOutput.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/jdparry/Downloads/FUCKYEAHBITCHES!!!/FinalCordic/RegisterBank.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/jdparry/Downloads/FUCKYEAHBITCHES!!!/FinalCordic/SerialTx.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/jdparry/Downloads/FUCKYEAHBITCHES!!!/FinalCordic/Shifter.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/jdparry/Downloads/FUCKYEAHBITCHES!!!/FinalCordic/XOR.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/jdparry/Downloads/FUCKYEAHBITCHES!!!/FinalCordic/X_AddSub.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/jdparry/Downloads/FUCKYEAHBITCHES!!!/FinalCordic/ascii.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/jdparry/Downloads/FUCKYEAHBITCHES!!!/FinalCordic/cordic_package.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/jdparry/Downloads/FUCKYEAHBITCHES!!!/FinalCordic/parallel_2_serial.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/jdparry/Downloads/FUCKYEAHBITCHES!!!/FinalCordic/send_data.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/jdparry/Downloads/FUCKYEAHBITCHES!!!/FinalCordic/slow_clk.vhd&quot; into library work</arg>
-</msg>
-
-<msg type="info" file="ProjectMgmt" num="1061" ><arg fmt="%s" index="1">Parsing VHDL file &quot;C:/Users/jdparry/Downloads/FUCKYEAHBITCHES!!!/FinalCordic/uart.vhd&quot; into library work</arg>
-</msg>
-
 </messages>
 

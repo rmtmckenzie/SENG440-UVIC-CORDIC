@@ -1,4 +1,2 @@
-vhdtdtfi -lib work Shifter.vhd -prj FinalCordic -o Shifter.spl -module Shifter -template C:/Xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3e Shifter.spl C:/Users/jdparry/Documents/FinalCordic/FinalCordic/Shifter.sym 
-vhdtdtfi -lib work Shifter.vhd -prj FinalCordic -o Shifter.spl -module Shifter -template C:/Xilinx/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
-spl2sym -intstyle ise -family spartan3e -w Shifter.spl C:/Users/jdparry/Documents/FinalCordic/FinalCordic/Shifter.sym 
+vhdtdtfi -lib work Shifter.vhd -prj FinalCordic -o Shifter.spl -module Shifter -template /project/CMC/tools/Xilinx-13.4/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Shifter.spl /home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/Shifter.sym 

@@ -1,5 +1,0 @@
-set -tmpdir "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/xst/projnav.tmp"
-set -xsthdpdir "C:/Users/jdparry/Downloads/FinalCordicFinal/FinalCordic/xst"
-elaborate
--ifn parallel_2_serial.prj
--ifmt mixed
