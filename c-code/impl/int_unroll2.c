@@ -13,7 +13,7 @@ extern inline void int_unroll2(int* restrict theta, int* restrict x, int* restri
     ly = *y;
     lz = *theta;
     
-    for(; i < NUM_ELEMENTS; i++, j++) {
+    for(; i < NUM_ELEMENTS; i+=2, j+=2) {
         //1
         if(!(lz & 0x80000000)){
             nx = lx - (ly >> i);

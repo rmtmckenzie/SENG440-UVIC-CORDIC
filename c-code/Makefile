@@ -1,14 +1,20 @@
-all: profiler profiler_opt
-arm: profiler_arm profiler_arm_opt
+all: profiler profiler_opt validator
+arm: profiler_arm profiler_arm_opt validator_arm
 
 valuetester:
 	gcc -Wall -pg -std=c99 -o build/valuetester valuetester.c
+
+validator_arm:
+	arm-linux-gcc -Wall --static -std=c99 -o build_arm/validate validate.c
 
 profiler_arm:
 	arm-linux-gcc -Wall -pg --static -std=c99 -o build_arm/profile profile.c
 
 profiler_arm_opt:
 	arm-linux-gcc -O3 -Wall -pg --static -std=c99 -o build_arm/profile_opt profile.c
+
+validator:
+	gcc -Wall -std=c99 -o build/validate validate.c
 
 profiler:
 	gcc -Wall -pg -std=c99 -o build/profile profile.c
