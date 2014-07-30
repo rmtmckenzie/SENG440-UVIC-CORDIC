@@ -1,7 +1,7 @@
 
 
 // memory alias disambiguation - restrict
-void int_hardcode(int* restrict theta, int* restrict x, int* restrict y, const int * restrict lookup)
+extern inline void int_hardcode(int* restrict theta, int* restrict x, int* restrict y, const int * restrict lookup)
 {
     int nx, ny, nz;
 
