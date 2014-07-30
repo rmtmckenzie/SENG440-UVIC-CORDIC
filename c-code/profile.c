@@ -94,7 +94,7 @@ int main(int argc, char *argv[])
         x = randomvals[i % MAXRANDS];
         y = randomvals[MAXRANDS - i % MAXRANDS];
         z = randomangles[i % MAXRANDS];
-        int_basic(&x, &y, &z, LOOKUP2);
+        int_basic(&x, &y, &z, LOOKUP1);
     }
     printf("Basic: %f\n",(double) (gettime() - before) / sysconf(_SC_CLK_TCK));
 #endif
@@ -105,7 +105,7 @@ int main(int argc, char *argv[])
         x = randomvals[i % MAXRANDS];
         y = randomvals[MAXRANDS - i % MAXRANDS];
         z = randomangles[i % MAXRANDS];
-        int_opt(&x, &y, &z, LOOKUP2);
+        int_opt(&x, &y, &z, LOOKUP1);
     }
     printf("Opt: %f\n",(double) (gettime() - before) / ticks_per_sec);
 #endif
@@ -116,7 +116,7 @@ int main(int argc, char *argv[])
         x = randomvals[i % MAXRANDS];
         y = randomvals[MAXRANDS - i % MAXRANDS];
         z = randomangles[i % MAXRANDS];
-        int_opt2(&x, &y, &z, LOOKUP2);
+        int_opt2(&x, &y, &z, LOOKUP1);
     }
     printf("Opt2: %f\n",(double) (gettime() - before) / ticks_per_sec);
 #endif
@@ -127,7 +127,7 @@ int main(int argc, char *argv[])
         x = randomvals[i % MAXRANDS];
         y = randomvals[MAXRANDS - i % MAXRANDS];
         z = randomangles[i % MAXRANDS];
-        int_unroll2(&x, &y, &z, LOOKUP2);
+        int_unroll2(&x, &y, &z, LOOKUP1);
     }
     printf("Unroll2: %f\n",(double) (gettime() - before) / ticks_per_sec);
 #endif
@@ -138,7 +138,7 @@ int main(int argc, char *argv[])
         x = randomvals[i % MAXRANDS];
         y = randomvals[MAXRANDS - i % MAXRANDS];
         z = randomangles[i % MAXRANDS];
-        int_unroll4(&x, &y, &z, LOOKUP2);
+        int_unroll4(&x, &y, &z, LOOKUP1);
     }
     printf("Unroll4: %f\n",(double) (gettime() - before) / ticks_per_sec);
 #endif
@@ -149,7 +149,7 @@ int main(int argc, char *argv[])
         x = randomvals[i % MAXRANDS];
         y = randomvals[MAXRANDS - i % MAXRANDS];
         z = randomangles[i % MAXRANDS];
-        int_pipe(&x, &y, &z, LOOKUP2);
+        int_pipe(&x, &y, &z, LOOKUP1);
     }
     printf("Pipe: %f\n",(double) (gettime() - before) / ticks_per_sec);
 #endif
@@ -160,7 +160,7 @@ int main(int argc, char *argv[])
         x = randomvals[i % MAXRANDS];
         y = randomvals[MAXRANDS - i % MAXRANDS];
         z = randomangles[i % MAXRANDS];
-        int_pipe2(&x, &y, &z, LOOKUP2);
+        int_pipe2(&x, &y, &z, LOOKUP1);
     }
     printf("Pipe2: %f\n",(double) (gettime() - before) / ticks_per_sec);
 #endif
@@ -171,7 +171,7 @@ int main(int argc, char *argv[])
         x = randomvals[i % MAXRANDS];
         y = randomvals[MAXRANDS - i % MAXRANDS];
         z = randomangles[i % MAXRANDS];
-        int_hardcode(&x, &y, &z, LOOKUP2);
+        int_hardcode(&x, &y, &z, LOOKUP1);
     }
     printf("Hardcode: %f\n",(double) (gettime() - before) / ticks_per_sec);
 #endif
