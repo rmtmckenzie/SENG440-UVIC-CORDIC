@@ -12,14 +12,14 @@ extern inline void int_opt(int* restrict theta, int* restrict x, int* restrict y
     lz = *theta;
     
     for(int i = 0; i != NUM_ELEMENTS; ++i) {
-        if(!(lz & 0x80000000)){
-            nx = lx - (ly >> i);
-            ny = ly + (lx >> i);
-            nz = lz - lookup[i];
-        } else {
+        if(lz & 0x80000000){
             nx = lx + (ly >> i);
             ny = ly - (lx >> i);
             nz = lz + lookup[i];
+        } else {
+            nx = lx - (ly >> i);
+            ny = ly + (lx >> i);
+            nz = lz - lookup[i];
         }
         lx = nx; ly = ny; lz = nz;
     }

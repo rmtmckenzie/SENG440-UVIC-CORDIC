@@ -92,35 +92,35 @@ int main(int argc, char *argv[])
         printf("IX: %d IY: %d YZ: %d\n",ix,iy,iz);
 
         bx = ix; by = iy; bz = iz;
-        int_basic(&bx, &by, &bz, LOOKUP2);
+        int_basic(&bx, &by, &bz, LOOKUP1);
         
         x = ix; y = iy; z = iz;
-        int_opt(&x, &y, &z, LOOKUP2);
+        int_opt(&x, &y, &z, LOOKUP1);
         check("opt",bx,by,bz,x,y,z);
         
         x = ix; y = iy; z = iz;
-        int_opt2(&x, &y, &z, LOOKUP2);
+        int_opt2(&x, &y, &z, LOOKUP1);
         check("opt2",bx,by,bz,x,y,z);
 
         x = ix; y = iy; z = iz;
-        int_unroll2(&x, &y, &z, LOOKUP2);
+        int_unroll2(&x, &y, &z, LOOKUP1);
         check("unroll2",bx,by,bz,x,y,z);
 
         x = ix; y = iy; z = iz;
-        int_unroll4(&x, &y, &z, LOOKUP2);
+        int_unroll4(&x, &y, &z, LOOKUP1);
         check("unroll4",bx,by,bz,x,y,z);
 
         x = ix; y = iy; z = iz;
-        int_pipe(&x, &y, &z, LOOKUP2);
+        int_pipe(&x, &y, &z, LOOKUP1);
         check("pipe",bx,by,bz,x,y,z);
 
         x = ix; y = iy; z = iz;
-        int_pipe2(&x, &y, &z, LOOKUP2);
+        int_pipe2(&x, &y, &z, LOOKUP1);
         check("pipe2",bx,by,bz,x,y,z);
 
         x = ix; y = iy; z = iz;
-        int_hardcode(&x, &y, &z, LOOKUP2);
-        check("pipe",bx,by,bz,x,y,z);
+        int_hardcode(&x, &y, &z, LOOKUP1);
+        check("hardcode",bx,by,bz,x,y,z);
 
     }
 

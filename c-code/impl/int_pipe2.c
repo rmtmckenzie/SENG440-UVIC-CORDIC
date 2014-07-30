@@ -16,16 +16,16 @@ extern inline void int_pipe2(int* restrict theta, int* restrict x, int* restrict
     
     lkv = lookup[0];
     for(int i = 0; i < NUM_ELEMENTS;) {
-        if(!(lz & 0x80000000)){
-            nx = lx - (ly >> i);
-            ny = ly + (lx >> i);
-            nz = lz - lkv;
-            lx = nx; ly = ny; lz = nz;
-            lkv = lookup[++i];
-        } else {
+        if(lz & 0x80000000){
             nx = lx + (ly >> i);
             ny = ly - (lx >> i);
             nz = lz + lkv;
+            lx = nx; ly = ny; lz = nz;
+            lkv = lookup[++i];
+        } else {
+            nx = lx - (ly >> i);
+            ny = ly + (lx >> i);
+            nz = lz - lkv;
             lx = nx; ly = ny; lz = nz;
             lkv = lookup[++i];
         }
