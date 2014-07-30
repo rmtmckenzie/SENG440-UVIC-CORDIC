@@ -1,0 +1,7 @@
+[Inputs]
+sel
+=a_in[31:0]=
+=b_in[31:0]=
+[Outputs]
+=val_out[31:0]=
+[BiDir]
