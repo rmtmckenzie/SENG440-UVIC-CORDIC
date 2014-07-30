@@ -1,6 +1,6 @@
 [Inputs]
-=val_in[31:0]=
-=i[4:0]=
+=val_in[15:0]=
+=i[15:0]=
 [Outputs]
-=val_out[31:0]=
+=val_out[15:0]=
 [BiDir]

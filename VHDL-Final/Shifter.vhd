@@ -9,9 +9,9 @@ use IEEE.NUMERIC_STD.ALL;
 --		output:		resultant
 
 entity Shifter is
-    Port ( val_in : in  STD_LOGIC_VECTOR (31 downto 0);
-			  i : in  STD_LOGIC_VECTOR (4 downto 0);
-           val_out : out  STD_LOGIC_VECTOR (31 downto 0));
+    Port ( val_in : in  STD_LOGIC_VECTOR (15 downto 0);
+			  i : in  STD_LOGIC_VECTOR (15 downto 0);
+           val_out : out  STD_LOGIC_VECTOR (15 downto 0));
 end Shifter;
 
 architecture Behavioral of Shifter is

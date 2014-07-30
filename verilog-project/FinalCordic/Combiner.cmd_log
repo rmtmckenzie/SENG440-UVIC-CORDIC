@@ -1,0 +1,17 @@
+vhdtdtfi -lib work Combiner.vhd -prj FinalCordic -o Combiner.spl -module Combiner -template /project/CMC/tools/Xilinx-13.4/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Combiner.spl /home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/Combiner.sym 
+vhdtdtfi -lib work Combiner.vhd -prj FinalCordic -o Combiner.spl -module Combiner -template /project/CMC/tools/Xilinx-13.4/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Combiner.spl /home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/Combiner.sym 
+vhdtdtfi -lib work Combiner.vhd -prj FinalCordic -o Combiner.spl -module Combiner -template /project/CMC/tools/Xilinx-13.4/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Combiner.spl /home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/Combiner.sym 
+vhdtdtfi -lib work Combiner.vhd -prj FinalCordic -o Combiner.spl -module Combiner -template /project/CMC/tools/Xilinx-13.4/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Combiner.spl /home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/Combiner.sym 
+vhdtdtfi -lib work Combiner.vhd -prj FinalCordic -o Combiner.spl -module Combiner -template /project/CMC/tools/Xilinx-13.4/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Combiner.spl /home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/Combiner.sym 
+vhdtdtfi -lib work Combiner.vhd -prj FinalCordic -o Combiner.spl -module Combiner -template /project/CMC/tools/Xilinx-13.4/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Combiner.spl /home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/Combiner.sym 
+vhdtdtfi -lib work Combiner.vhd -prj FinalCordic -o Combiner.spl -module Combiner -template /project/CMC/tools/Xilinx-13.4/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Combiner.spl /home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/Combiner.sym 
+vhdtdtfi -prj FinalCordic -o /home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/Combiner.vhi -module Combiner -template /project/CMC/tools/Xilinx-13.4/13.4/ISE_DS/ISE//data/vhdlinst.tft -deleteonerror -lib work Combiner.vhd 
+vhdtdtfi -lib work Combiner.vhd -prj FinalCordic -o Combiner.spl -module Combiner -template /project/CMC/tools/Xilinx-13.4/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Combiner.spl /home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/Combiner.sym 

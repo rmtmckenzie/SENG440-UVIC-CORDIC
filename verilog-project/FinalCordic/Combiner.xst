@@ -1,0 +1,5 @@
+set -tmpdir "/home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/xst/projnav.tmp"
+set -xsthdpdir "/home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/xst"
+elaborate
+-ifn Combiner.prj
+-ifmt mixed

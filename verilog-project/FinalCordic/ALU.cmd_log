@@ -1,0 +1,1 @@
+sch2sym -intstyle ise -family spartan3e -w -refsym ALU /home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/ALU.sch /home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/ALU.sym 

@@ -1,0 +1,6 @@
+AR combiner behavioral /home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/Combiner.vhd sub00/vhpl03 1406755858
+EN combiner NULL /home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/Combiner.vhd sub00/vhpl02 1406755857
+EN spliter NULL /home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/Spliter.vhd sub00/vhpl00 1406754419
+AR lookup_table behavioral /home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/Lookup_Table.vhd sub00/vhpl05 1406757401
+AR spliter behavioral /home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/Spliter.vhd sub00/vhpl01 1406754420
+EN lookup_table NULL /home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/Lookup_Table.vhd sub00/vhpl04 1406757400

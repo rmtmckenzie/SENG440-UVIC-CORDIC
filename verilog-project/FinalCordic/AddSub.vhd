@@ -15,9 +15,9 @@ use IEEE.STD_LOGIC_UNSIGNED.ALL;
 --			val_out: 	result of calculation
 
 entity AddSub is
-    Port ( a_in : in  STD_LOGIC_VECTOR (31 downto 0);
-			  b_in : in  STD_LOGIC_VECTOR (31 downto 0);
-           val_out : out  STD_LOGIC_VECTOR (31 downto 0);
+    Port ( a_in : in  STD_LOGIC_VECTOR (15 downto 0);
+			  b_in : in  STD_LOGIC_VECTOR (15 downto 0);
+           val_out : out  STD_LOGIC_VECTOR (15 downto 0);
            sel : in  STD_LOGIC);
 end AddSub;
 

@@ -1,5 +1,5 @@
 [Inputs]
-=Zi[15:0]=
+=i[15:0]=
 [Outputs]
-Output
+=theta[15:0]=
 [BiDir]

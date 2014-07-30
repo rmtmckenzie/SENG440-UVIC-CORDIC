@@ -2,3 +2,5 @@ vhdtdtfi -lib work Comparator.vhd -prj FinalCordic -o Comparator.spl -module Com
 spl2sym -intstyle ise -family spartan3e -w Comparator.spl /home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/Comparator.sym 
 vhdtdtfi -lib work Comparator.vhd -prj FinalCordic -o Comparator.spl -module Comparator -template /project/CMC/tools/Xilinx-13.4/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
 spl2sym -intstyle ise -family spartan3e -w Comparator.spl /home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/Comparator.sym 
+vhdtdtfi -lib work Comparator.vhd -prj FinalCordic -o Comparator.spl -module Comparator -template /project/CMC/tools/Xilinx-13.4/13.4/ISE_DS/ISE//data/splfile.tft -deleteonerror 
+spl2sym -intstyle ise -family spartan3e -w Comparator.spl /home/jdparry/SENG440-UVIC-CORDIC/verilog-project/FinalCordic/Comparator.sym 
