@@ -15,7 +15,7 @@ int main(int argc, char *argv[])
         printf("Operation is rotation.\n");
         return 0;
     }
-    
+
     // Program variables.
     int xin,x,yin,y,zin,z;
 
@@ -37,7 +37,7 @@ int main(int argc, char *argv[])
     printf("Method 1:\n");
     printf("Starting Angle: %i\n\n", z);
 
-    int_basic(&z, &x, &y, LOOKUP1);
+    int_basic(&x, &y, &z, LOOKUP1);
     // Print final values.
 
     printf("Xout: %i\n",x);
@@ -52,7 +52,7 @@ int main(int argc, char *argv[])
 
     printf("Method 2:\n");
     printf("Starting Angle: %i\n\n", z);
-    int_basic(&z, &x, &y, LOOKUP2);
+    int_basic(&x, &y, &z, LOOKUP2);
 
     printf("Xout: %i\n",x);
     printf("Yout: %i\n",y);

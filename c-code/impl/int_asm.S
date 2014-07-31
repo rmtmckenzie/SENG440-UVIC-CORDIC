@@ -16,7 +16,7 @@ int_asm:
 	str	r1, [fp, #-44]
 	str	r2, [fp, #-48]
 	str	r3, [fp, #-52]		@is this needed?
-	
+
 	@ r0=x, r1=y, r2=z
 	ldr r0, [r0]
 	ldr r1, [r1]
@@ -24,25 +24,25 @@ int_asm:
 
 	@ int i = 0
 	mov r4, #0
-	
+
 	@ skip first comp as know i < 16
-	
+
 FORLOOP:
-	
+
 	@ r5 = y >> i
 	mov r5, r1, asr r4
 	@ r6 = x >> i
 	mov r6, r0, asr r4
-	@ r7 = LOOKUP[i]	
+	@ r7 = LOOKUP[i]
 	@ shift i << 2 for bytes
-	mov r7, r4, asl #2
-	add r7, r3, r7
-	ldr r7, [r7, #0]
+@	mov r7, r4, asl #2
+@	add r7, r3, r7
+	ldr r7, [r3]
 
 	cmp r2, #0
 	bge POS
-	@ if(z < 0) 
-	
+	@ if(z < 0)
+
 NEG:
 	@ nx = x + (y >> i)
 
@@ -69,7 +69,7 @@ POS:
 	rsb r2, r7, r2
 
 FORCHECK:
-	
+
 	@ x = nx, y = ny
 	mov r0, r5
 	mov r1, r6
@@ -81,6 +81,8 @@ FORCHECK:
 
 	@i += 1
 	add r4, r4, #1
+
+	add r3, r3, #4
 
 	b 	FORLOOP
 
