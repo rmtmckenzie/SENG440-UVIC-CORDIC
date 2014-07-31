@@ -1,6 +1,6 @@
 
 // memory alias disambiguation - restrict
-extern inline void int_opt2(int* restrict theta, int* restrict x, int* restrict y, const int * restrict lookup)
+extern inline void int_opt2(int* restrict x, int* restrict y, const int* restrict z, const int * restrict lookup)
 {
 
     int nx, ny, nz;
@@ -9,7 +9,7 @@ extern inline void int_opt2(int* restrict theta, int* restrict x, int* restrict 
     int lx, ly, lz;    
     lx = *x;
     ly = *y;
-    lz = *theta;
+    lz = *z;
     
     for(int i = 0; i != NUM_ELEMENTS; ++i) {
         if(lz & 0x80000000){
@@ -27,5 +27,4 @@ extern inline void int_opt2(int* restrict theta, int* restrict x, int* restrict 
 
     *x = lx;
     *y = ly;
-    *theta = lz;
 }

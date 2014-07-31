@@ -1,6 +1,6 @@
 
 // memory alias disambiguation - restrict
-extern inline void int_unroll2(int* restrict theta, int* restrict x, int* restrict y, const int * restrict lookup)
+extern inline void int_unroll2(int* restrict x, int* restrict y, const int* restrict z, const int * restrict lookup)
 {
 
     int nx, ny, nz;
@@ -11,7 +11,7 @@ extern inline void int_unroll2(int* restrict theta, int* restrict x, int* restri
     int lx, ly, lz;    
     lx = *x;
     ly = *y;
-    lz = *theta;
+    lz = *z;
     
     for(; i < NUM_ELEMENTS; i+=2, j+=2) {
         //1
@@ -42,5 +42,4 @@ extern inline void int_unroll2(int* restrict theta, int* restrict x, int* restri
 
     *x = lx;
     *y = ly;
-    *theta = lz;
 }
