@@ -77,7 +77,7 @@ def main():
     
     f = open(os.devnull, 'w')
 
-    sys.stdout = f
+  #  sys.stdout = f
 
     tx1 = 0; ty1 = 0; tx2 = 0; ty2 = 0;
     for i in xrange(numrand):
@@ -87,7 +87,7 @@ def main():
         tx2 += abs(x2);
         ty2 += abs(y2);
 
-    sys.stdout = sys.__stdout__    
+   # sys.stdout = sys.__stdout__    
 
     tx1 /= numrand;
     ty1 /= numrand;
