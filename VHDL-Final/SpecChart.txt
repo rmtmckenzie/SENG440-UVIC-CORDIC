@@ -1,0 +1,22 @@
+signal i, x, y, z, start;
+types STATES is (run, idle);
+variable state_var : STATES;
+
+state_var := idle;
+run_loop:loop
+	case state_var is
+		when run =>
+			Calculate_XY(i,z,x,y);
+			Calculate_Z(i,z);
+			i++;
+			if(i = 17) then
+				state_var := idle
+			end if;
+
+		when idle =>
+			wait until start;
+			if(start) then
+				state_var := run;
+			end if;
+	end case;
+end loop;
