@@ -19,6 +19,7 @@
 #include "impl/int_pipe.c"
 #include "impl/int_pipe2.c"
 #include "impl/int_hardcode.c"
+#include "impl/int_asm.h"
 
 /* 
 Optimizations:
@@ -39,15 +40,13 @@ Implementations:
 
 */
 
-void check(char* type, int bx, int by, int bz, int x, int y, int z) {
-    if(bx != x || by != y || bz != z) {
+void check(char* type, int bx, int by, int x, int y) {
+    if(bx != x || by != y) {
         printf("%s: ",type);
         if(bx != x)
             printf("bx: %d, x: %d ",bx,x);
         if(by != y)
             printf("by: %d, y: %d ",by,y);
-        if(bz != z)
-            printf("bz: %d, z: %d ",bz,z);
         printf("\n");
     }
 }
@@ -92,35 +91,39 @@ int main(int argc, char *argv[])
         printf("IX: %d IY: %d YZ: %d\n",ix,iy,iz);
 
         bx = ix; by = iy; bz = iz;
-        int_basic(&bx, &by, &bz, LOOKUP1);
+        int_basic(&bx, &by, &bz, LOOKUP2);
         
         x = ix; y = iy; z = iz;
-        int_opt(&x, &y, &z, LOOKUP1);
-        check("opt",bx,by,bz,x,y,z);
+        int_opt(&x, &y, &z, LOOKUP2);
+        check("opt",bx,by,x,y);
         
         x = ix; y = iy; z = iz;
-        int_opt2(&x, &y, &z, LOOKUP1);
-        check("opt2",bx,by,bz,x,y,z);
+        int_opt2(&x, &y, &z, LOOKUP2);
+        check("opt2",bx,by,x,y);
 
         x = ix; y = iy; z = iz;
-        int_unroll2(&x, &y, &z, LOOKUP1);
-        check("unroll2",bx,by,bz,x,y,z);
+        int_unroll2(&x, &y, &z, LOOKUP2);
+        check("unroll2",bx,by,x,y);
 
         x = ix; y = iy; z = iz;
-        int_unroll4(&x, &y, &z, LOOKUP1);
-        check("unroll4",bx,by,bz,x,y,z);
+        int_unroll4(&x, &y, &z, LOOKUP2);
+        check("unroll4",bx,by,x,y);
 
         x = ix; y = iy; z = iz;
-        int_pipe(&x, &y, &z, LOOKUP1);
-        check("pipe",bx,by,bz,x,y,z);
+        int_pipe(&x, &y, &z, LOOKUP2);
+        check("pipe",bx,by,x,y);
 
         x = ix; y = iy; z = iz;
-        int_pipe2(&x, &y, &z, LOOKUP1);
-        check("pipe2",bx,by,bz,x,y,z);
+        int_pipe2(&x, &y, &z, LOOKUP2);
+        check("pipe2",bx,by,x,y);
 
         x = ix; y = iy; z = iz;
-        int_hardcode(&x, &y, &z, LOOKUP1);
-        check("hardcode",bx,by,bz,x,y,z);
+        int_hardcode(&x, &y, &z, LOOKUP2);
+        check("hardcode",bx,by,x,y);
+
+		x = ix; y = iy; z = iz;
+		int_asm(&x, &y, &z, LOOKUP2);
+		check("asm",bx,by,x,y);
 
     }
 

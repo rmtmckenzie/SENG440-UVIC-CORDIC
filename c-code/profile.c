@@ -17,6 +17,7 @@
 #define RPIPE
 #define RPIPE2
 #define RHARDCODE
+#define RASM
 
 #define MAXRANDS 1000
 
@@ -28,8 +29,11 @@
 #include "impl/int_pipe.c"
 #include "impl/int_pipe2.c"
 #include "impl/int_hardcode.c"
+#include "impl/int_asm.h"
 
 /* 
+NOTE: compile linking impl/int_asm.S
+
 Optimizations:
     1: Operator Strength Reduction
     2: Loop Unrolling
@@ -68,9 +72,10 @@ int main(int argc, char *argv[])
 
     printf("Running %d times.\n",num);
 
+	volatile int i;
     int randomvals[MAXRANDS];
     int randomangles[MAXRANDS];
-    for(int i = 0; i < MAXRANDS; i++) {
+    for(i = 0; i < MAXRANDS; i++) {
         randomvals[i] = rand() % 10000 + 1000;
         randomangles[i] = rand() % HALFPI2;
     }
@@ -90,91 +95,103 @@ int main(int argc, char *argv[])
 
 #ifdef RBASIC
     before = gettime();
-    for(int i = 0; i < num; i++){
+    for(i = 0; i < num; i++){
         x = randomvals[i % MAXRANDS];
         y = randomvals[MAXRANDS - i % MAXRANDS];
         z = randomangles[i % MAXRANDS];
-        int_basic(&x, &y, &z, LOOKUP1);
+        int_basic(&x, &y, &z, LOOKUP2);
     }
     printf("Basic: %f\n",(double) (gettime() - before) / sysconf(_SC_CLK_TCK));
 #endif
 
 #ifdef ROPT
     before = gettime();
-    for(int i = 0; i < num; i++){
+    for(i = 0; i < num; i++){
         x = randomvals[i % MAXRANDS];
         y = randomvals[MAXRANDS - i % MAXRANDS];
         z = randomangles[i % MAXRANDS];
-        int_opt(&x, &y, &z, LOOKUP1);
+        int_opt(&x, &y, &z, LOOKUP2);
     }
     printf("Opt: %f\n",(double) (gettime() - before) / ticks_per_sec);
 #endif
 
 #ifdef ROPT2
     before = gettime();
-    for(int i = 0; i < num; i++){
+    for(i = 0; i < num; i++){
         x = randomvals[i % MAXRANDS];
         y = randomvals[MAXRANDS - i % MAXRANDS];
         z = randomangles[i % MAXRANDS];
-        int_opt2(&x, &y, &z, LOOKUP1);
+        int_opt2(&x, &y, &z, LOOKUP2);
     }
     printf("Opt2: %f\n",(double) (gettime() - before) / ticks_per_sec);
 #endif
 
 #ifdef RUNROLL2
     before = gettime();
-    for(int i = 0; i < num; i++){
+    for(i = 0; i < num; i++){
         x = randomvals[i % MAXRANDS];
         y = randomvals[MAXRANDS - i % MAXRANDS];
         z = randomangles[i % MAXRANDS];
-        int_unroll2(&x, &y, &z, LOOKUP1);
+        int_unroll2(&x, &y, &z, LOOKUP2);
     }
     printf("Unroll2: %f\n",(double) (gettime() - before) / ticks_per_sec);
 #endif
 
 #ifdef RUNROLL4
     before = gettime();
-    for(int i = 0; i < num; i++){
+    for(i = 0; i < num; i++){
         x = randomvals[i % MAXRANDS];
         y = randomvals[MAXRANDS - i % MAXRANDS];
         z = randomangles[i % MAXRANDS];
-        int_unroll4(&x, &y, &z, LOOKUP1);
+        int_unroll4(&x, &y, &z, LOOKUP2);
     }
     printf("Unroll4: %f\n",(double) (gettime() - before) / ticks_per_sec);
 #endif
 
 #ifdef RPIPE
     before = gettime();
-    for(int i = 0; i < num; i++){
+    for(i = 0; i < num; i++){
         x = randomvals[i % MAXRANDS];
         y = randomvals[MAXRANDS - i % MAXRANDS];
         z = randomangles[i % MAXRANDS];
-        int_pipe(&x, &y, &z, LOOKUP1);
+        int_pipe(&x, &y, &z, LOOKUP2);
     }
     printf("Pipe: %f\n",(double) (gettime() - before) / ticks_per_sec);
 #endif
 
 #ifdef RPIPE2
     before = gettime();
-    for(int i = 0; i < num; i++){
+    for(i = 0; i < num; i++){
         x = randomvals[i % MAXRANDS];
         y = randomvals[MAXRANDS - i % MAXRANDS];
         z = randomangles[i % MAXRANDS];
-        int_pipe2(&x, &y, &z, LOOKUP1);
+        int_pipe2(&x, &y, &z, LOOKUP2);
     }
     printf("Pipe2: %f\n",(double) (gettime() - before) / ticks_per_sec);
 #endif
 
 #ifdef RHARDCODE
     before=gettime();
-    for(int i = 0; i < num; i++){
+    for(i = 0; i < num; i++){
         x = randomvals[i % MAXRANDS];
         y = randomvals[MAXRANDS - i % MAXRANDS];
         z = randomangles[i % MAXRANDS];
-        int_hardcode(&x, &y, &z, LOOKUP1);
+        int_hardcode(&x, &y, &z, LOOKUP2);
     }
     printf("Hardcode: %f\n",(double) (gettime() - before) / ticks_per_sec);
 #endif
 
+#ifdef RASM
+	before=gettime();
+	for(i = 0; i < num; i++){
+        x = randomvals[i % MAXRANDS];
+        y = randomvals[MAXRANDS - i % MAXRANDS];
+        z = randomangles[i % MAXRANDS];
+		int_asm(&x, &y, &z, LOOKUP2);
+	}
+	printf("Asm: %f\n",(double) (gettime() - before) / ticks_per_sec);
+#endif
+
     return 0;
 }
+

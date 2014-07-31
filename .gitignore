@@ -28,13 +28,12 @@
 # GEdit save files
 *~
 
-c-code/build/profile*
-c-code/build/temp*
-c-code/build/validate*
+c-code/build/*
+c-code/build_arm/*
+c-code/assembly/*
 
-c-code/build_arm/profile*
-c-code/build_arm/temp*
-c-code/build_arm/validate*
-
-*.asm
-*temp
+!c-code/assembly/Makefile
+!c-code/build_arm/Makefile
+!c-code/build_arm/do_profile.sh
+!c-code/build/Makefile
+!c-code/build/do_profile.sh
