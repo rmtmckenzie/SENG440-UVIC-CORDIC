@@ -1,0 +1,24 @@
+// Input A = i and z
+// Input B = X, and Y
+// Output C
+// Assuming R1 to R4 16-bit registers available.
+// Instructions used: RIGHT-SHIFT, JUMP-IF-EQUAL, NOP, ADD, SUBTRACT, and MOVE
+
+main:
+	RIGHT-SHIFT B15-B0, int(A31-A16) > R1 		// Y value shifted by i value and placed in R1.
+		RIGHT-SHIFT B31-B16, int(A31-A16) > R2	// X value shifted by i value and placed in R2.
+	JUMP-IF-EQUAL A15, 0, branch				// If Z is negative (most significant bit 1), jump to branch flag.
+		NOP										// No Pipelined operation.
+	ADD B31-B16, R1 > R3						// Add current X and shifted Y Values, store in R3.
+		SUBTRACT B15-B0, R2 > R4				// Subtract current Y and shifted X values, store in R4.
+	JUMP done									// Jump to done flag.
+
+branch:
+	ADD B15-B10, R2 > R4						// Add current Y and shifted X Values, store in R4.
+		SUBTRACT B31-B16, R1 > R3				// Subtract current X and shifted Y values, store in R3.
+
+done:
+	MOVE R4 > C15-C0							// Move final Y value to least significant half of output.
+		NOP										// No operation because writing to value also done for next command.
+	MOVE R3 > C31-C16							// Move final X value to most significant half of output.
+		NOP										// No more operations to complete.
