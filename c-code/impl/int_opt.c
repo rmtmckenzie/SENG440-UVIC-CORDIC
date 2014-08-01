@@ -12,6 +12,7 @@ extern inline void int_opt(int* restrict x, int* restrict y, const int* restrict
     lz = *z;
     
     for(int i = 0; i != NUM_ELEMENTS; ++i) {
+        //more efficient calculation of sign
         if(lz & 0x80000000){
             nx = lx + (ly >> i);
             ny = ly - (lx >> i);
