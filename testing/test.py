@@ -6,7 +6,7 @@ test.py
 import os
 import sys
 import random
-from math import radians, degrees, sin, cos, atan
+from math import radians, degrees, sin, cos, atan, sqrt
 import subprocess
 
 def do(filename):
@@ -77,24 +77,40 @@ def main():
     
     f = open(os.devnull, 'w')
 
-  #  sys.stdout = f
+    sys.stdout = f
 
     tx1 = 0; ty1 = 0; tx2 = 0; ty2 = 0;
+    sx1 = 0; sy1 = 0; sx2 = 0; sy2 = 0;
     for i in xrange(numrand):
         (x1,y1,x2,y2) = do(exe)
-        tx1 += abs(x1);
-        ty1 += abs(y1);
-        tx2 += abs(x2);
-        ty2 += abs(y2);
-
-   # sys.stdout = sys.__stdout__    
-
-    tx1 /= numrand;
-    ty1 /= numrand;
-    tx2 /= numrand;
-    ty2 /= numrand;
-    print "Averages: x1 = {:5.2f}, y1 = {:5.2f}; x2 = {:5.2f}, y2 = {:5.2f}".format(tx1,ty1,tx2,ty2)
+        tx1 += abs(x1)
+        ty1 += abs(y1)
+        tx2 += abs(x2)
+        ty2 += abs(y2)
+        sx1 += (x1*x1)
+        sy1 += (y1*y1)
+        sx2 += (x2*x2)
+        sy2 += (y2*y2)
     
+    sys.stdout = sys.__stdout__    
+
+    tx1 /= numrand
+    ty1 /= numrand
+    tx2 /= numrand
+    ty2 /= numrand
+
+    sx1 /= numrand
+    sy1 /= numrand
+    sx2 /= numrand
+    sy2 /= numrand
+
+    sx1 = sqrt(sx1)
+    sy1 = sqrt(sy1)
+    sx2 = sqrt(sx2)
+    sy2 = sqrt(sy2)
+    
+    print "Averages: x1 = {:5.2f}, y1 = {:5.2f}; x2 = {:5.2f}, y2 = {:5.2f}".format(tx1,ty1,tx2,ty2)
+    print "Stddev: x1 = {:5.2f}, y1 = {:5.2f}; x2 = {:5.2f}, y2 = {:5.2f}".format(sx1,sy1,sx2,sy2)
     f.close()
 
     return 0        # success
